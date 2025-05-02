@@ -1,6 +1,6 @@
 # dmc_website
 
-## Contents of each file:
+### Contents of each file:
 
 **homepage.html** : all new code for landing page–open with live server in VS code to preview changes.\
 *Notes*:
