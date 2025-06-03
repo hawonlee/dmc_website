@@ -7,315 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Website</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
     <style>
-        /* InfoBars formatting */
-        body {
-            font: normal 10px avenir, sans-serif;
-        }
-
-        .main-cont {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .infoBars {
-            color: black;
-            text-align: left;
-            justify-items: center;
-        }
-
-        .infoBars p {
-            font-size: 14px;
-            color: rgb(90, 90, 90);
-            line-height: 1.5;
-            margin-top: 5px;
-        }
-
-        .infoBars h1 {
-            font-size: 24px;
-        }
-
-        .step-header {
-            display: flex;
-            flex-direction: row;
-            justify-content: left;
-            align-items: center;
-        }
-
-        .step p {
-            line-height: 1.5;
-            margin-top: 5px;
-            margin-left: 35px;
-            color: rgb(90, 90, 90);
-        }
-
-        .step-number {
-            background-color: #000000;
-            color: white;
-            font-weight: 700;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 10px;
-        }
-
-        .spacer {
-            height: 10px;
-        }
-
-        .FAQ_question-bar {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-            gap: 6px;
-            flex-wrap: nowrap;
-            white-space: normal;
-            word-break: break-word;
-            
-            /* display: grid;
-            grid-template-columns: 1fr 1fr;
-            line-height: 1.4; */
-        }
-
-        .FAQ-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            align-items: left;
-        }
-
-        .FAQ_question {
-            margin-top: 10px;
-            /* border: 1px solid #ccc;
-            border-radius: 5px; */
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .FAQ_question-bar b {
-            font-weight: bold;
-            line-height: inherit;
-        }
-
-        .FAQ_answer {
-            display: none;
-            font-size: 14px;
-            color: rgb(90, 90, 90);
-            line-height: 1.5;
-            margin-top: 15px;
-            padding: 5px;
-        }
-
-        .infoBars-hideShow {
-            font-size: 14px;
-            height: 15px;
-            width: 10px;
-            flex-shrink: 0;
-            font-size: 18px;
-            line-height: 1;
-            margin-right: 10px;
-            color: #000000;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Shorten the title on mobile */
-        #title-short {
-            display: none;
-        }
-
-        /* Contact us styling */
-
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            justify-content: left;
-            align-items: left;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .contact-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .contact-buttons a {
-            text-decoration: none;
-            font-weight: 500;
-            color: #000000;
-            font-size: 14px;
-        }
-
-        .icon-phone {
-            width: 20px;
-            height: auto;
-        }
-
-        @media (max-width: 1500px) {
-            .infoBars-content {
-                width: 45%;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .infoBars-content {
-                width: 60%;
-            }
-
-            .infoBars-title {
-                font-size: 90%;
-            }
-
-            #title-long {
-                display: none;
-            }
-
-            #title-short {
-                display: inline;
-            }
-
-        }
-
-        @media (max-width: 768px) {
-            .infoBars-content {
-                width: 60%;
-            }
-
-            .infoBars-title {
-                font-size: 90%;
-            }
-
-            #title-long {
-                display: none;
-            }
-
-            #title-short {
-                display: inline;
-            }
-        }
-
-        @media (max-width: 350px) {
-
-            .infoBars-title {
-                font-size: 80%;
-            }
-
-            .infoBars-hideShow {
-                font-size: 80%;
-            }
-        }
-
-        @media (max-width: 300px) {
-            .infoBars-title {
-                font-size: 70%;
-            }
-
-            .infoBars-hideShow {
-                font-size: 70%;
-            }
-        }
-
-        .two-main-butts-cont {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-            text-align: center;
-        }
-
-        /* Individual main button styles */
-
-        .two-main-butts-cont {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 15px;
-            user-select: none;
-            align-items: center;
-            border-radius: 8px;
-            height: 100px;
-            font-weight: bold;
-            font-size: large;
-            
-        }
-
-        .two-main-butts {
-            width: 160px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 11px;
-            border-radius: 30px;
-            color: white;
-            font-weight: 500;
-            font-size: 14px;
-            gap: 10px;
-        }
-
-        .two-main-butts img {
-            max-height: 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .banner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 130px;
-        }
-
-        .banner h1 {
-            text-align: center;
-            font-size: 5em;
-            margin: 0;
-        }
-
-        .banner h2 {
-            text-align: center;
-            font-size: 3em;
-            margin: 0;
-        }
-
-        .banner p {
-            width: 50%;
-            font-size: 14px;
-            margin: 0;
-            font-weight: normal;
-            text-align: center;
-        }
-
-        .menu-bar {
-            display: flex;
-            direction: row;
-            justify-content: space-between;
-            font-size: 14px;
-            padding: 20px;
-            width: 90%;
-        }
-
-        .menu-bar .links {
-            display: flex;
-            justify-content: row;
-            align-items: center;
-            gap: 20px;
-        }
-
+        @import url("homepageStyle.css");
     </style>
 </head>
 
@@ -339,31 +32,34 @@
             <div class="banner">
                 <h1> Welcome to BookIt! </h1>
                 <p> By the Creative Media Center at JHU <X>
-    
+                <div class="spacer"></div>
                 <!-- ********** Main Buttons ********** -->
-                <div class="two-main-butts-cont">
+                 <div class="two-main-butts-cont">
                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                         <a onclick="hideShowEquipButt(event)">
                             <img src="https://libapps.s3.amazonaws.com/customers/9396/images/equip_butt.png" />
                         </a>
-    
+                
                         <a class="homepage-grid-link" onclick="hideShowEquipButt(event)">
                             Equipment
                         </a>
                     </div>
-    
+                
                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                         <a onclick="hideShowInlabButt(event)">
                             <img src="https://libapps.s3.amazonaws.com/customers/9396/images/inlab_butt.png" />
                         </a>
-    
+                
                         <a onclick="hideShowInlabButt(event)">
                             In-Lab Resources
                         </a>
                     </div>
                 </div>
-    
             </div>
+
+            <div class="spacer"></div>
+            <div class="spacer"></div>
+            <div class="spacer"></div>
     
             <div class="banner" style="margin-bottom: 120px;">
                 <h2> Welcome to BookIt! </h2>
@@ -374,7 +70,6 @@
                 </p>
     
             </div>
-    
            
             <div class="spacer"></div>
     
@@ -383,14 +78,16 @@
                 <div class="infoBars-content">
     
                     <!-- ********** New Members ********** -->
-    
+                    <!-- Check DMC Eligibility -->
                     <h1>New to the DMC?</h1>
     
                     <p id="firstTimeIntro">Before you can check-out items, you must first become
                         a <i>member</i> of the DMC.
                         Follow these steps to become a member:</p>
-    
+                    
+                    
                     <div class="step-container">
+                        <!-- Step 1 -->
                         <div class="step">
                             <div class="step-header">
                                 <div class="step-number">1</div>
@@ -401,7 +98,7 @@
                                 other students pay a one-time $50 fee. For more details, see
                                 our FAQ or Contact Us.</p>
                         </div>
-    
+                        <!-- Step 2 -->
                         <div class="step">
                             <div class="step-header">
                                 <div class="step-number">2</div>
@@ -411,7 +108,8 @@
                                 Charles St, right between FedEx
                                 and Homewood Apartments, underneath The LaB.</p>
                         </div>
-    
+                        
+                        <!-- Step 3 -->
                         <div class="step">
                             <div class="step-header">
                                 <div class="step-number">3</div>
@@ -421,7 +119,8 @@
                                 that you&#39;d like to become
                                 a member.</p>
                         </div>
-    
+                        
+                        <!-- Step 4 -->
                         <div class="step">
                             <div class="step-header">
                                 <div class="step-number">4</div>
@@ -430,7 +129,8 @@
                             <p>We will show you a short video and have you fill out a
                                 short form online.</p>
                         </div>
-    
+                        
+                        <!-- Step 5 -->
                         <div class="step">
                             <div class="step-header">
                                 <div class="step-number">5</div>
