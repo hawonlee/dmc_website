@@ -1,0 +1,440 @@
+<style>
+    /* InfoBars formatting */
+    body {
+        font: normal 10px avenir, sans-serif;
+    }
+
+    .main-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .infoBars {
+        color: black;
+        text-align: left;
+        justify-items: center;
+    }
+
+    .infoBars p {
+        font-size: 14px;
+        color: rgb(90, 90, 90);
+        line-height: 1.5;
+        margin-top: 5px;
+    }
+    
+    iframe[iframetag] {
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
+
+    .infoBars h1 {
+        font-size: 24px;
+    }
+
+    .step-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .step p {
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-left: 35px;
+        color: rgb(90, 90, 90);
+    }
+
+    .step-number {
+        background-color: #000000;
+        color: white;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .spacer {
+        height: 30px;
+    }
+
+    .FAQ_question-bar {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        gap: 6px;
+        flex-wrap: nowrap;
+        white-space: normal;
+        word-break: break-word;
+        
+        /* display: grid;
+        grid-template-columns: 1fr 1fr;
+        line-height: 1.4; */
+    }
+
+    .FAQ-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+    }
+
+    .FAQ_question {
+        margin-top: 10px;
+        /* border: 1px solid #ccc;
+        border-radius: 5px; */
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .FAQ_question-bar b {
+        font-weight: bold;
+        line-height: inherit;
+    }
+
+    .FAQ_answer {
+        display: none;
+        font-size: 14px;
+        color: rgb(90, 90, 90);
+        line-height: 1.5;
+        margin-top: 15px;
+        padding: 5px;
+    }
+
+    .infoBars-hideShow {
+        font-size: 14px;
+        height: 15px;
+        width: 10px;
+        flex-shrink: 0;
+        font-size: 18px;
+        line-height: 1;
+        margin-right: 10px;
+        color: #000000;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Shorten the title on mobile */
+    #title-short {
+        display: none;
+    }
+
+    /* Contact us styling */
+
+    .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-buttons a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #000000;
+        font-size: 14px;
+    }
+
+    .icon-phone {
+        width: 20px;
+        height: auto;
+    }
+
+    @media (max-width: 1500px) {
+        .infoBars-content {
+            width: 45%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .infoBars-content {
+            width: 60%;
+        }
+
+        .infoBars-title {
+            font-size: 90%;
+        }
+
+        #title-long {
+            display: none;
+        }
+
+        #title-short {
+            display: inline;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .infoBars-content {
+            width: 60%;
+        }
+
+        .infoBars-title {
+            font-size: 90%;
+        }
+
+        #title-long {
+            display: none;
+        }
+
+        #title-short {
+            display: inline;
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .infoBars-title {
+            font-size: 80%;
+        }
+
+        .infoBars-hideShow {
+            font-size: 80%;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .infoBars-title {
+            font-size: 70%;
+        }
+
+        .infoBars-hideShow {
+            font-size: 70%;
+        }
+    }
+
+    .menu-bar {
+        display: flex;
+        direction: row;
+        justify-content: space-between;
+        font-size: 14px;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .menu-bar .links {
+        display: flex;
+        justify-content: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .s-lc-avail-content {
+        display: none;
+    }
+
+</style>
+<div class="infoBars">
+    <div class="infoBars-content">
+        <h1 id="title-long">Frequently Asked Questions</h1>
+        <h1 id="title-short">FAQ</h1>
+        <div class="" id="FAQ-content" active="false">
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div> What is the DMC?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    The Digital Media Center (DMC) is a multimedia lab space and
+                    an equipment, printing, and knowledge resource for students
+                    interested in exploring creative uses of emerging media and technology
+                    to communicate their ideas.<br><br>More information about the
+                    DMC can be found on our <a href="https://studentaffairs.jhu.edu/dmc/">JHU
+                        student affairs website</a>.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div> Who can use the DMC?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    To use most DMC resources, such as equipment checkouts &
+                    in-lab workstations, you must first become a "member" of the
+                    DMC.<br><br>To attend DMC workshops and events or use our Pharos laser
+                    printers, you must simply be a Johns Hopkins student with an active
+                    J-Card.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div> How do I become a <b> member </b> & is it free?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    If you are an eligible student, come into the DMC anytime we
+                    are open and let the front desk staff know you'd like to become
+                    a member. We will show you a short orientation video and
+                    enroll you in our booking system. Your DMC Membership will be active as
+                    long as you remain a JHU student.<br><br><strong>Membership is free
+                        for:</strong>
+                    <ul>
+                        <li>Full-time students in the Krieger School of Arts and
+                            Sciences (KSAS), Whiting School of Engineering
+                            (WSE), or Peabody.</li>
+                    </ul><strong>Membership costs a one-time $50 fee for
+                        students in:</strong>
+                    <ul>
+                        <li>KSAS or WSE, and are part-time</li>
+                        <li>Advanced Academic Program (AAP), even if full-time
+                            KSAS</li>
+                        <li>School of Medicine (JHMI/SOM)</li>
+                        <li>Carey Business School</li>
+                        <li>School of Public Health</li>
+                        <li>School of Nursing</li>
+                        <li>School of Education</li>
+                        <li>School of Advanced International Studies (SAIS)</li>
+                    </ul><strong>Membership is not available to:</strong>
+                    <ul>
+                        <li>Postdoctoral Fellows</li>
+                        <li>Visiting Scholars</li>
+                        <li>Faculty &amp; Staff</li>
+                    </ul>The membership fee is a one-time $50 charge which can
+                    be paid online with a credit card through your phone's web browser
+                    when you become a member.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div> My booking can be <b>how long</b>?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    Up to 3 days upon making your initial booking, with up to
+                    three 1-day renewals upon request.<br><br>If you require an
+                    extended checkout time, please email digitalmedia@jhu.edu with your
+                    request.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div>How do I <b>renew</b> my booking?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    To renew your items for 1 additional day, first check that
+                    the equipment is available using the scheduler below. If you see
+                    that the items are available, please call us at <a href="tel:4105163817">410-516-3817</a>
+                    during
+                    our regular business hours and ask to renew your items.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div>How do I get <b>authorized</b> on equipment?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    Be a DMC member and ask one of our staff members which item
+                    you'd like authorizations on. As long as a qualified staffer and
+                    the equipment are available, we will then train you on how to
+                    use it which usually includes a short video and a one-on-one
+                    hands-on training. We may ask that you make an appointment for more
+                    advanced items like the Audio Studio.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div>How do I <b>print</b> at the DMC?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    The DMC offers a variety of professional-quality
+                    <b>self-service</b> printing and imaging tools, from photo and document printing
+                    to 3D-printing and large-format poster printers.<br><br>Traditional
+                    document printing is available at our in-lab Pharos Kiosk,
+                    and laser prints B&W or Color on letter, legal, and magazine sized
+                    paper.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div> How do I <b>3D-print</b> at the DMC?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    The DMC offers self-service 3D printing on Prusa i3 MK3S
+                    printers with a selection of filaments available for purchase
+                    (charged by the hour). You must first be authorized on the 3D printers in
+                    order to reserve them. Set up an appointment at the front desk or
+                    contact us.
+                </div>
+            </div>
+            <div class="FAQ_question" answer-active="false">
+                <a onclick="hideShow_FAQ_answer(event)">
+                    <div class="FAQ_question-bar">
+                        <span class="infoBars-hideShow">+</span>
+                        <div>I want to check out a <b>camera</b>. How does that work?</div>
+                    </div>
+                </a>
+                <div class="FAQ_answer">
+                    After becoming a member of the DMC, you can check out a
+                    simple point and shoot camera without the need for an authorization. To checkout
+                    more advanced cameras like DSLRs, you must first complete an
+                    authorization on our intro-level photo/video cameras (Canon
+                    t5i/Canon vixias). You can ask our staff about higher level camera
+                    authorizations if you are interested.<br><br>If you are not yet a
+                    member, please plan accordingly as this whole process of
+                    getting a DSLR can take up to an hour for both the member orientation
+                    and camera authorization.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Function to hide/show the FAQ section
+    function hideShow_FAQ_answer(event) {
+        const faqQuestion = event.currentTarget.parentElement;
+        const faqAnswer = faqQuestion.querySelector('.FAQ_answer');
+        const isActive = faqQuestion.getAttribute('answer-active') === 'true';
+
+        if (isActive) {
+            faqAnswer.style.display = 'none';
+            faqQuestion.setAttribute('answer-active', 'false');
+            faqQuestion.querySelector('.infoBars-hideShow').innerHTML = '+';
+        } else {
+            faqAnswer.style.display = 'block';
+            faqQuestion.setAttribute('answer-active', 'true');
+            faqQuestion.querySelector('.infoBars-hideShow').innerHTML = '–';
+        }
+    }
+</script>
