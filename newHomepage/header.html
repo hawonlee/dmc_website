@@ -24,7 +24,7 @@
         gap: 20px;
     }
     a {
-        text-decoration: none;
+        text-decoration: white;
         text-decoration-line: none;
     }
 
@@ -33,25 +33,122 @@
         display: flex;
         flex-direction: column;
     }
+
+    .black {
+        background-color: black;
+        width: max-content;
+    }
+
+    .whiteText {
+        text-decoration-color: white;
+    }
+
+    @media (max-width: 768px) {
+        .main-cont {
+            width: 768px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 14px;
+            padding: 20px;
+            width: 90%;
+        }
+
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: larger;
+            gap: 20px;
+        }
+    }
+    @media (max-width: 465px) {
+        .main-cont {
+            width: 465px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 15px;
+            width: 90%;
+        }
+
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: small;
+            gap: 15px;
+        }
+    }
+    @media (max-width: 350px) {
+        .main-cont {
+            width: 350px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 10px;
+            padding: 10px;
+            width: 90%;
+        }
+
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: small;
+            gap: 10px;
+        }
+    }
+    @media (max-width: 275px){
+        .main-cont {
+            width: 275px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 10px;
+            padding: 5px;
+            width: 90%;
+        }
+
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: x-small;
+            gap: 5px;
+        }
+    }
 </style>
-<div class="CENTER">
-    <div class="main-cont">
-        <div class="menu-bar">
-            <div>
-                <a href="https://bookit.dmc.jhu.edu/">
-                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/Group_16.png">
-                </a>
-            </div>
-            <div class="links">
-                <a href="https://bookit.dmc.jhu.edu/passes/first-time">
-                    <div>First Time?</div>
-                </a>
-                <a href="https://bookit.dmc.jhu.edu/passes/faq">
-                    <div>FAQ</div>
-                </a>
-                <a href="https://bookit.dmc.jhu.edu/calendar?cid=21643">
-                    <div>Calendar</div>
-                </a>
+<!-- https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/Group_19.png -->
+<div>
+    <div class="CENTER">
+        <div class="main-cont">
+            <div class="menu-bar">
+                <div>
+                    <a href="https://bookit.dmc.jhu.edu/">
+                        <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/Group_16.png">
+                    </a>
+                </div>
+                <div class="links">
+                    <a class="whiteText" href="https://bookit.dmc.jhu.edu/passes/first-time">
+                        <div>First Time?</div>
+                    </a>
+                    <a class="whiteText" href="https://bookit.dmc.jhu.edu/passes/faq">
+                        <div>FAQ</div>
+                    </a>
+                    <a class="whiteText" href="https://bookit.dmc.jhu.edu/calendar?cid=21643">
+                        <div>Calendar</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

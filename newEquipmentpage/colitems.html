@@ -1,0 +1,25 @@
+<!-- equipment vs inlab navigation -->
+ <div >
+        <a id="link" href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
+            <div id="navigate">
+                Go to In-lab Resources
+            </div>
+        </a>
+</div>
+<script>
+    var addEquipOrLabBtn = function() {
+        // If on an equipment item page (URL="https://bookit.dmc.jhu.edu/reserve/equipment/dmc...")
+        let naviBtn = document.getElementById("navigate")
+        let linkBtn = document.getElementById("link")
+        if (/https:\/\/bookit\.dmc\.jhu\.edu\/reserve\/equipment\/dmc/.test(window.location.href)) {
+            naviBtn.textContent = "Go to In-Lab Resources"
+            linkBtn.href = "https://bookit.dmc.jhu.edu/reserve/spaces/dmc"
+        } else if (/https:\/\/bookit\.dmc\.jhu\.edu\/reserve\/spaces\/dmc/.test(window.location.href)) {
+            naviBtn.textContent = "Go to Equipment"
+            linkBtn.href = "https://bookit.dmc.jhu.edu/reserve/equipment/dmc"
+        }
+    
+    };
+    // Run the function on DOM load
+    document.addEventListener("DOMContentLoaded", addEquipOrLabBtn);
+</script>
