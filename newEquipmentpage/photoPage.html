@@ -1,11 +1,14 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 <style>
-    .s-lc-avail-content {
-        display: none;
-    }
-
     .menu_container {
+        font-family: "Figtree", sans-serif;
         display: flex;
         flex-direction: row;
+    }
+
+    .s-lc-avail-content {
+            display: none;
     }
 
     .sidebar {
@@ -25,7 +28,7 @@
     }
 
     .card {
-        border: 1px solid #000;
+        border: 1px solid #dddddd;
         border-left: #ffffff;
         border-right: #ffffff;
         border-top: #ffffff;
@@ -42,7 +45,7 @@
     }
 
     .cardTop {
-        border: 1px solid #000;
+        border: 1px solid #dddddd;
         border-left: #ffffff;
         border-right: #ffffff;
         background-color: rgb(255, 255, 255);
@@ -58,7 +61,7 @@
     }
 
     .cardSelect {
-        border: 1px solid #000;
+        border: 1px solid #dddddd;
         border-left: #ffffff;
         border-right: #ffffff;
         background-color: rgb(0, 0, 0);
@@ -126,13 +129,15 @@
     .itemBox {
         height: 300px;
         width: 250px;
-        border: 1px solid black;
+        border: 1px solid rgb(193, 193, 193);
+        border-radius: 10px;
         text-decoration-color: #000000;
         background-color: #ffffff;
         margin-top: 20px;
         margin-bottom: 20px;
         margin-left: 15px;
         margin-right: 15px;
+        padding-bottom: 5px;
     }
 
     .itemBox img {
@@ -149,7 +154,34 @@
         text-decoration-color: #000;
         color: #000;
     }
+
+    a :hover {
+        text-decoration-line: none;
+        text-decoration-color:#000;
+    }
+
+    .help {
+
+    }
+
+    .help div:hover {
+        border: 1px solid #dddddd;
+        border-left: #ffffff;
+        border-right: #ffffff;
+        background-color: rgb(0, 0, 0);
+        border-top: #ffffff;
+        width: 90%;
+        height: 50px;
+        text-align: left;
+        padding-left: 20px;
+        align-content: center;
+        margin: auto;
+        color: #ffffff;
+        position: relative;
+        cursor: grab;
+    }
 </style>
+</head>
 
 <div class="menu_container">
     <div id="Sidebar" class="sidebar">
@@ -173,54 +205,50 @@
             Categories
         </div>
         <!-- **Category** + Cat = Audio Category = Audio Cat -->
-        <a href="https://bookit.dmc.jhu.edu/passes/audio">
-            <div id="AudioCat" class="cardTop">
-                Audio
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/computing">
-            <div id="CompCat" class="card">
-                Computing
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/gaming">
-            <div id="GamingCat" class="card">
-                Gaming
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/maker-diy">
-            <div id="MakerCat" class="card">
-                Maker/DIY
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/photo">
-            <div id="PhotoCat" class="cardSelect">
-                Photo/Video
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/whitepoint.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/projector">
-            <div id="ProjectorCat" class="card">
-                Projectors
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/software">
-            <div id="SoftwareCat" class="card">
-                Software
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/passes/other">
-            <div id="OtherCat" class="card">
-                Other
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
-            </div>
-        </a>
+        <div class="help">
+            <a href="https://bookit.dmc.jhu.edu/passes/audio">
+                <div id="AudioCat" class="cardTop">
+                    Audio
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/passes/computing">
+                <div id="CompCat" class="card">
+                    Computing
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/passes/gaming">
+                <div id="GamingCat" class="card">
+                    Gaming
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/passes/maker-diy">
+                <div id="MakerCat" class="card">
+                    Maker/DIY
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/passes/photo">
+                <div id="PhotoCat" class="cardSelect">
+                    Photo/Video
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/whitepoint.png">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/passes/projector">
+                <div id="ProjectorCat" class="card">
+                    Projectors
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/passes/other">
+                <div id="OtherCat" class="card">
+                    Other
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
+                </div>
+            </a>
+        </div>
     </div>
 
     <!-- display for photo categories -->

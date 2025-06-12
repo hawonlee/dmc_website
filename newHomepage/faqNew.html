@@ -1,0 +1,322 @@
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    /* InfoBars formatting */
+
+    .main-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infoBars {
+        color: black;
+        text-align: left;
+        justify-items: center;
+        font-family: "Figtree", sans-serif;
+    }
+
+    .infoBars p {
+        font-size: 14px;
+        color: rgb(90, 90, 90);
+        line-height: 1.5;
+        margin-top: 5px;
+    }
+
+    .infoBars h1 {
+        font-size: 24px;
+    }
+
+    .step-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+    
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+    }
+
+    .step-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .step p {
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-left: 35px;
+        color: rgb(22, 22, 22);
+    }
+
+    .step-number {
+        background-color: #000000;
+        color: white;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .spacer {
+        height: 30px;
+    }
+
+    /* Shorten the title on mobile */
+    #title-short {
+        display: none;
+    }
+
+
+    @media (max-width: 1500px) {
+        .infoBars-content {
+            width: 45%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .infoBars-content {
+            width: 85%;
+        }
+
+        .infoBars-title {
+            font-size: 90%;
+        }
+
+        #title-long {
+            display: none;
+        }
+
+        #title-short {
+            display: inline;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .infoBars-content {
+            width: 85%;
+        }
+
+        .infoBars-title {
+            font-size: 90%;
+        }
+
+        #title-long {
+            display: none;
+        }
+
+        #title-short {
+            display: inline;
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .infoBars-title {
+            font-size: 80%;
+        }
+
+        .infoBars-hideShow {
+            font-size: 80%;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .infoBars-title {
+            font-size: 70%;
+        }
+
+        .infoBars-hideShow {
+            font-size: 70%;
+        }
+    }
+
+    .s-lc-avail-content {
+        display: none;
+    }
+
+    .s-lc-public-title {
+        display: none;
+    }
+
+</style>
+</head>
+
+<div class="main-cont">
+    <div class="infoBars">
+        <div class="infoBars-content">
+
+        <h1 id="title-long">Frequently Asked Questions</h1>
+        <h1 id="title-short">FAQ</h1>
+            <div class="step-container">
+                <!-- Step 1 -->
+                <div class="step" >
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h2>What is the CMC?</h2>
+                    </div>
+                    <p>The Creative Media Center (CMC) is a multimedia lab space and
+                        an equipment, printing, and knowledge resource for students
+                        interested in exploring creative uses of emerging media and technology
+                        to communicate their ideas.<br><br>More information about the
+                        CMC can be found on our <a href="https://studentaffairs.jhu.edu/dmc/">JHU
+                        student affairs website</a>.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h2>Who can use the CMC?</h2>
+                    </div>
+                    <p> Individuals must become members of the CMC in order to use the resources available.
+                        The CMC is for <b>student use only</b>.
+                        Only undgraduate, graduate, and PHD students enrolled at JHU 
+                        in KSAS or WSE full-time are allowed to use CMC resources as members <b>for free</b>.
+                        Undergraduates studying at the Peabody Conservatory also
+                        have access <b>for free</b>.
+                        <br><br>
+                        If you are a Master student in the AAP (Advance Academic Programs), or
+                        a student in the Bloomberg School of Public Health, School of Medicine, 
+                        Carey School of Business, School of Advanced International Studies, or
+                        School of Nursing, you must pay a <b>one time $50 fee</b> to become a 
+                        member of the CMC.
+                        <br><br>
+                        Additionally, <b>membership is not available to </b> Postdoctoral
+                        Fellows, Visiting Scholars, and Faculty &amp; Staff.
+                        <br><br>
+                        If you are a graduating student, access to the CMC will end
+                        immediately following graduation.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h2>How do I become a member?</h2>
+                    </div>
+                    <p>If you are an eligible student, come into the CMC anytime we
+                        are open and let the front desk staff know you'd like to become
+                        a member. We will show you a short orientation video and
+                        enroll you in our booking system. Your CMC Membership will be active as
+                        long as you remain a JHU student.
+                        <br><br>
+                        You can also watch our orientation video from the comfort of your home 
+                        right <a href="https://jhu.campusgroups.com//DMC/survey?survey_uid=5e904a56-1c0a-11ee-8b14-0a86d64fe70d&feedback_event_id=&content_type=&content_type_id=">
+                            here.
+                        </a> Please keep in mind that it may take some time to be authorized as a member,
+                        as student staff will need to add you to our system after verifying the membership 
+                        process is completed.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <h2>How long can I book out items?</h2>
+                    </div>
+                    <p>Up to 3 days upon making your initial booking, with up to
+                        three 1-day renewals upon request.<br><br>If you require an
+                        extended checkout time, please email cmcprostaff@jhu.edu with your
+                        request.
+                        <br><br>
+                        Please keep in mind that items may not always be extended, as other 
+                        patrons may book out items right or close to your return time.
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">5</div>
+                        <h2>How do I renew my booking?</h2>
+                    </div>
+                    <p>To renew your items for 1 additional day, first check that
+                        the equipment is available using the scheduler below. If you see
+                        that the items are available, please call us at <a href="tel:4105163817">410-516-3817</a>
+                        during
+                        our regular business hours and ask to renew your items.
+                    </p>
+                </div>
+                <!-- Step 6 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">6</div>
+                        <h2>How do I get authorized on equipment?</h2>
+                    </div>
+                    <p>Be a CMC member and ask one of our staff members which item
+                        you'd like authorizations on. As long as a qualified staffer and
+                        the equipment are available, we will then train you on how to
+                        use it which usually includes a short video and a one-on-one
+                        hands-on training. We may ask that you make an appointment for more
+                        advanced items like the Audio Studio.
+                    </p>
+                </div>
+                <!-- Step 7 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">7</div>
+                        <h2>How do I print at the CMC?</h2>
+                    </div>
+                    <p>
+                    The CMC offers a variety of professional-quality
+                    <b>self-service</b> printing and imaging tools, from photo and document printing
+                    to 3D-printing and large-format poster printers.<br><br>Traditional
+                    document printing is available at our in-lab Pharos Kiosk,
+                    and laser prints B&W or Color on letter, legal, and magazine sized
+                    paper. Please note that we have a limit of <b>25 copies</b> per document print;
+                     please do not send multiple students from the same organization to print
+                      the same document.
+                    </p>
+                </div>
+                <!-- Step 8 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">8</div>
+                        <h2>How do I 3D-print at the CMC?</h2>
+                    </div>
+                    <p>
+                        The CMC offers self-service 3D printing on Prusa i3 MK3S
+                        printers with a selection of filaments available for purchase
+                        (charged by the hour). You must first be authorized on the 3D printers in
+                        order to reserve them. Set up an appointment at the front desk or
+                        contact us.
+                    </p>
+                </div>
+                <!-- Step 9 -->
+                <div class="step">
+                    <div class="step-header">
+                        <div class="step-number">9</div>
+                        <h2>How do I check out a camera at the CMC?</h2>
+                    </div>
+                    <p>
+                        After becoming a member of the CMC, you can check out a
+                    simple point and shoot camera without the need for an authorization. To checkout
+                    more advanced cameras like DSLRs, you must first complete an
+                    authorization on our intro-level photo/video cameras (Canon
+                    t5i/Canon vixias). You can ask our staff about higher level camera
+                    authorizations if you are interested.<br><br>If you are not yet a
+                    member, please plan accordingly as this whole process of
+                    getting a DSLR can take up to an hour for both the member orientation
+                    and camera authorization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

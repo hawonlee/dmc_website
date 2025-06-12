@@ -10,6 +10,7 @@
     .s-lc-avail-content {
             display: none;
     }
+
     .sidebar {
         background-color: rgb(255, 255, 255);
         width: 25%;
@@ -24,6 +25,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        padding-top: 100px;
+
     }
 
     .card {
@@ -59,7 +65,7 @@
         cursor: grab;
     }
 
-    .cardSelect {
+    .help div:hover {
         border: 1px solid #dddddd;
         border-left: #ffffff;
         border-right: #ffffff;
@@ -74,14 +80,6 @@
         color: #ffffff;
         position: relative;
         cursor: grab;
-    }
-
-    .cardSelect img {
-        position: absolute;
-        right: 20px;
-        margin: auto;
-        top: 0;
-        bottom: 0;
     }
 
     .card img {
@@ -142,8 +140,13 @@
     .itemBox img {
         display: block;
         margin: auto;
+        padding-top: 10px;
         height: 85%;
-        width: 85%;        
+        width: 90%;        
+    }
+
+    .help {
+
     }
 
     a {
@@ -153,32 +156,6 @@
         text-decoration-color: #000;
         color: #000;
     }
-
-    a :hover {
-        text-decoration-line: none;
-        text-decoration-color:#000;
-    }
-
-    .help {
-
-    }
-
-    .help div:hover {
-        border: 1px solid #dddddd;
-        border-left: #ffffff;
-        border-right: #ffffff;
-        background-color: rgb(0, 0, 0);
-        border-top: #ffffff;
-        width: 90%;
-        height: 50px;
-        text-align: left;
-        padding-left: 20px;
-        align-content: center;
-        margin: auto;
-        color: #ffffff;
-        position: relative;
-        cursor: grab;
-    }
 </style>
 </head>
 
@@ -187,18 +164,20 @@
         <div class="cardTitle">
             Section
         </div>
-        <a href="https://bookit.dmc.jhu.edu/passes/audio">
-            <div id="EquipmentBtn" class="cardSelect">
-                Equipment
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/equip_butt.png" width="25px" height="25px">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
-            <div id="ResourcesBtn" class="card">
-                In-Lab Resources
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/blackInlab.png" width="25px" height="25px">
-            </div>
-        </a>
+        <div class="help">
+            <a href="https://bookit.dmc.jhu.edu/passes/audio">
+                <div id="EquipmentBtn" class="cardTop">
+                    Equipment
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/blackEquip.png" width="25px" height="25px">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
+                <div id="ResourcesBtn" class="card">
+                    In-Lab Resources
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/blackInlab.png" width="25px" height="25px">
+                </div>
+            </a>
+        </div>
         <div class="spacer"></div>
         <div class="cardTitle">
             Categories
@@ -242,36 +221,16 @@
                 </div>
             </a>
             <a href="https://bookit.dmc.jhu.edu/passes/other">
-                <div id="OtherCat" class="cardSelect">
+                <div id="OtherCat" class="card">
                     Other
-                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/whitepoint.png">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
                 </div>
             </a>
         </div>
     </div>
 
-    <!-- display for other categories -->
-    <div id="Other" class="info" visibility="hidden">
-        <div class="spacer"></div>
-        <div class="itemBox">
-            <a href="https://bookit.dmc.jhu.edu/reserve/Bags">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Bags.png" /> 
-            </a>
-            <br>
-            <div class="padding">
-                Portable Storage &amp; Transport
-            </div>
-        </div>
-        <div class="itemBox">
-            <a href="https://bookit.dmc.jhu.edu/reserve/ACPowerCables">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_ACPowerCables.png" /> 
-            </a>
-            <br>
-            <div class="padding">
-                Power Cables &amp; Portable Power
-            </div>
-        </div>
-        <div class="spacer"></div>
+    <div class="info">
+        Please select a category to get started.
     </div>
 
 </div>

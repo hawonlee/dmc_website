@@ -1,227 +1,261 @@
-<style type="text/css">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style type="text/css">
 
-/*hawon's css*/
-.two-main-butts-cont {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-    text-align: center;
-}
-
-.banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Individual main button styles */
-
-.two-main-butts-cont {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5px;
-    user-select: none;
-    align-items: center;
-    border-radius: 8px;
-    height: 100px;
-    font-weight: bold;
-    font-size: large;
-    
-}
-
-.two-main-butts {
-    width: 160px;
-    height: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 11px;
-    border-radius: 30px;
-    color: white;
-    font-weight: 500;
-    font-size: 14px;
-    gap: 5px;
-}
-
-.two-main-butts img {
-    max-height: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-
-    /*end of hawon's css*/
-
-.imgclass {
-    opacity: .8;
-}
-
-.spacer {
-    height: 30px;
-}
-
-.bg {
-    background-color: black;
-}
-
-.hero-text {
-    text-align: center;
-    font-size: xx-large;
-    font-style: normal;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-    display: none;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 5s;
-}
-
-@keyframes fade {
-    from {opacity: .8}
-    to {opacity: 1}
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-}
-
-@media (max-width: 768px) {
-    .main-cont {
-        width: 768px;
+    /*hawon's css*/
+    .two-main-butts-cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        text-align: center;
     }
-    .menu-bar {
+
+    .banner {
         display: flex;
-        direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Individual main button styles */
+
+    .two-main-butts-cont {
+        display: flex;
+        flex-direction: row;
+        user-select: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        height: 100px;
+        font-weight: bold;
+        font-size: large;
+        
+    }
+
+    .two-main-butts {
+        width: 200px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 11px;
+        border-radius: 30px;
+        color: white;
+        font-weight: 500;
         font-size: 14px;
-        padding: 20px;
-        width: 90%;
-    }
-    .menu-bar .links {
-        display: flex;
-        justify-content: row;
-        align-items: center;
-        font-size: larger;
-        gap: 20px;
-    }
-    .hero-text {
-        font-size: x-large;
-    }
-    .spacer {
-        height: 20px;
-    }
-}
-
-@media (max-width: 465px) {
-    .main-cont {
-        width: 465px;
-    }
-    .menu-bar {
-        display: flex;
-        direction: row;
-        justify-content: space-between;
-        font-size: 12px;
-        padding: 15px;
-        width: 90%;
-    }
-    .hero-text {
-        font-size: x-large;
-    }
-    .menu-bar .links {
-        display: flex;
-        justify-content: row;
-        align-items: center;
-        font-size: small;
-        gap: 15px;
-    }
-    .spacer {
-        height: 0px;
-    }
-}
-
-@media (max-width: 350px) {
-    .main-cont {
-        width: 350px;
-    }
-    .menu-bar {
-        display: flex;
-        direction: row;
-        justify-content: space-between;
-        font-size: 10px;
-        padding: 10px;
-        width: 90%;
-    }
-    .hero-text {
-        font-size: large;
-    }
-    .menu-bar .links {
-        display: flex;
-        justify-content: row;
-        align-items: center;
-        font-size: small;
-        gap: 10px;
-    }
-    .spacer {
-        height: 0px;
-    }
-}
-
-@media (max-width: 275px){
-    .main-cont {
-        width: 275px;
-    }
-    .menu-bar {
-        display: flex;
-        direction: row;
-        justify-content: space-between;
-        font-size: 10px;
-        padding: 5px;
-        width: 90%;
-    }
-    .hero-text {
-        font-size: large;
-    }
-    .menu-bar .links {
-        display: flex;
-        justify-content: row;
-        align-items: center;
-        font-size: x-small;
         gap: 5px;
     }
 
-    .spacer {
-        height: 0px;
+    .two-main-butts img {
+        max-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        row-gap: 5px;
+        margin: 0;
     }
-}
 
-</style>
+
+        /*end of hawon's css*/
+
+    .imgclass {
+        opacity: .8;
+    }
+
+    .spacer {
+        height: 30px;
+    }
+
+    .bg {
+        background-color: black;
+    }
+
+    .hero-text {
+        text-align: center;
+        font-size: xx-large;
+        font-weight: 900;
+        font-style: normal;
+        font-family: "Figtree", sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    .slideshow-container {
+        position: relative;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .8}
+        to {opacity: 1}
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    a {
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    color: black;
+    }
+
+    a :hover {
+            text-decoration-line: none;
+            text-decoration-color:#000;
+        }
+
+    @media (max-width: 768px) {
+        .main-cont {
+            width: 768px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 14px;
+            padding: 20px;
+            width: 90%;
+        }
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: larger;
+            gap: 20px;
+        }
+        .hero-text {
+            font-size: x-large;
+        }
+        .spacer {
+            height: 20px;
+        }
+
+        .two-main-butts {
+            width: 160px;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 465px) {
+        .main-cont {
+            width: 465px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 15px;
+            width: 90%;
+        }
+        .hero-text {
+            font-size: x-large;
+        }
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: small;
+            gap: 15px;
+        }
+        .spacer {
+            height: 0px;
+        }
+        .two-main-butts {
+            width: 100px;
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .main-cont {
+            width: 350px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 10px;
+            padding: 10px;
+            width: 90%;
+        }
+        .hero-text {
+            font-size: large;
+        }
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: small;
+            gap: 10px;
+        }
+        .spacer {
+            height: 0px;
+        }
+        .two-main-butts {
+            width: 75px;
+            font-size: 8px;
+        }
+    }
+
+    @media (max-width: 275px){
+        .main-cont {
+            width: 275px;
+        }
+        .menu-bar {
+            display: flex;
+            direction: row;
+            justify-content: space-between;
+            font-size: 10px;
+            padding: 5px;
+            width: 90%;
+        }
+        .hero-text {
+            font-size: large;
+        }
+        .menu-bar .links {
+            display: flex;
+            justify-content: row;
+            align-items: center;
+            font-size: x-small;
+            gap: 5px;
+        }
+
+        .spacer {
+            height: 0px;
+        }
+
+        .two-main-butts {
+            width: 50px;
+            font-size: 8px;
+        }
+    }
+
+    .two-main-butts-cont a:hover {
+        text-decoration-line: none;
+    }
+
+    </style>
+</head>
 <div>
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -234,17 +268,17 @@ a {
                     <div class="main-cont">
                         <div class="banner">
                             <div class="two-main-butts-cont">
-                                <a href="https://bookit.dmc.jhu.edu/reserve/equipment/dmc">
+                                <a href="https://bookit.dmc.jhu.edu/passes/equipment">
                                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                                         <img src="https://libapps.s3.amazonaws.com/customers/9396/images/equip_butt.png" />
-                                        <span>Equipment</span>
+                                        Equipment
                                     </div>
                                 </a>
 
                                 <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
                                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                                         <img src="https://libapps.s3.amazonaws.com/customers/9396/images/inlab_butt.png" />
-                                        <span>In-Lab Resources</span>
+                                        In-Lab Resources
                                     </div>
                                 </a>
                             </div>
@@ -264,17 +298,17 @@ a {
                     <div class="main-cont">
                         <div class="banner">
                             <div class="two-main-butts-cont">
-                                <a href="https://bookit.dmc.jhu.edu/reserve/Projectors">
+                                <a href="https://bookit.dmc.jhu.edu/passes/equipment">
                                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                                         <img src="https://libapps.s3.amazonaws.com/customers/9396/images/equip_butt.png" />
-                                        <span>Equipment</span>
+                                        Equipment
                                     </div>
                                 </a>
 
-                                <a href="https://bookit.dmc.jhu.edu/spaces?lid=16257&gid=0&c=0">
+                                <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
                                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                                         <img src="https://libapps.s3.amazonaws.com/customers/9396/images/inlab_butt.png" />
-                                        <span>In-Lab Resources</span>
+                                        In-Lab Resources
                                     </div>
                                 </a>
                             </div>
@@ -294,17 +328,17 @@ a {
                     <div class="main-cont">
                         <div class="banner">
                             <div class="two-main-butts-cont">
-                                <a href="https://bookit.dmc.jhu.edu/reserve/Projectors">
+                                <a href="https://bookit.dmc.jhu.edu/passes/equipment">
                                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                                         <img src="https://libapps.s3.amazonaws.com/customers/9396/images/equip_butt.png" />
-                                        <span>Equipment</span>
+                                        Equipment
                                     </div>
                                 </a>
 
-                                <a href="https://bookit.dmc.jhu.edu/spaces?lid=16257&gid=0&c=0">
+                                <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
                                     <div class="two-main-butts" style="background-color: #4d6ca9;">
                                         <img src="https://libapps.s3.amazonaws.com/customers/9396/images/inlab_butt.png" />
-                                        <span>In-Lab Resources</span>
+                                        In-Lab Resources
                                     </div>
                                 </a>
                             </div>
