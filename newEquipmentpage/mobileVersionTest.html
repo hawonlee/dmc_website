@@ -25,6 +25,11 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        padding-top: 100px;
+
     }
 
     .card {
@@ -60,7 +65,7 @@
         cursor: grab;
     }
 
-    .cardSelect {
+    .help div:hover {
         border: 1px solid #dddddd;
         border-left: #ffffff;
         border-right: #ffffff;
@@ -93,15 +98,8 @@
         bottom: 0;
     }
 
-    .cardSelect img {
-        position: absolute;
-        right: 20px;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-    }
-
     .cardTitle {
+        background-color: rgb(255, 255, 255);
         width: 90%;
         height: 50px;
         text-align: left;
@@ -142,8 +140,13 @@
     .itemBox img {
         display: block;
         margin: auto;
+        padding-top: 10px;
         height: 85%;
-        width: 85%;        
+        width: 90%;        
+    }
+
+    .help {
+
     }
 
     a {
@@ -154,101 +157,63 @@
         color: #000;
     }
 
-    a :hover {
-        text-decoration-line: none;
-        text-decoration-color:#000;
-    }
-
-    .help {
-
-    }
-
-    .help div:hover {
-        border: 1px solid #dddddd;
-        border-left: #ffffff;
-        border-right: #ffffff;
-        background-color: rgb(0, 0, 0);
-        border-top: #ffffff;
-        width: 90%;
-        height: 50px;
-        text-align: left;
-        padding-left: 20px;
-        align-content: center;
-        margin: auto;
-        color: #ffffff;
-        position: relative;
-        cursor: grab;
-    }
-
     .openbtn {
         color: #000;
         width: 50px;
         height: 50px;
         background-color: #ffffff;
-        border: none;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
         cursor: pointer;
         display: none;
-        font-size: 40px;
-        font-weight: bolder;
     }
+
     .closebtn {
-        font-size: 50px;
+        font-size: x-large;
         color: #000;
         text-align: right;
         margin-right: 0;
         display: none;
     }
-    .itemTitle {
-        background-color: rgb(255, 255, 255);
-        width: 90%;
-        height: 50px;
-        text-align: left;
-        font-size: x-large;
-        align-content: center;
-        text-decoration-color: #000;
-        position: relative;
-        display: none;
-        padding-left: 20px;
-    }
     @media (max-width: 768px) {
         .openbtn {
             display: block;
         }
+        .closebtn {
+            display: block;
+        }
         .sidebar {
             width: 100%;
-            display: none;
         }
         .info {
-            display: block;
-        }
-        .itemTitle {
-            display: block;
+            display: none;
         }
     }
-
 
 </style>
 </head>
 
 <div class="menu_container">
-    <button id="open" class="openbtn" onclick="openNav()">&#9776;</button>
+    <!-- <button class="openbtn" onclick="openNav()">&#9776;</button> -->
     <div id="Sidebar" class="sidebar">
-        <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
         <div class="cardTitle">
             Section
         </div>
-        <a href="https://bookit.dmc.jhu.edu/passes/audio">
-            <div id="EquipmentBtn" class="cardSelect">
-                Equipment
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/equip_butt.png" width="25px" height="25px">
-            </div>
-        </a>
-        <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
-            <div id="ResourcesBtn" class="card">
-                In-Lab Resources
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/blackInlab.png" width="25px" height="25px">
-            </div>
-        </a>
+        <div class="help">
+            <a href="https://bookit.dmc.jhu.edu/passes/audio">
+                <div id="EquipmentBtn" class="cardTop">
+                    Equipment
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/blackEquip.png" width="25px" height="25px">
+                </div>
+            </a>
+            <a href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
+                <div id="ResourcesBtn" class="card">
+                    In-Lab Resources
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/blackInlab.png" width="25px" height="25px">
+                </div>
+            </a>
+        </div>
         <div class="spacer"></div>
         <div class="cardTitle">
             Categories
@@ -262,9 +227,9 @@
                 </div>
             </a>
             <a href="https://bookit.dmc.jhu.edu/passes/computing">
-                <div id="CompCat" class="cardSelect">
+                <div id="CompCat" class="card">
                     Computing
-                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/whitepoint.png">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pointright.png">
                 </div>
             </a>
             <a href="https://bookit.dmc.jhu.edu/passes/gaming">
@@ -300,62 +265,20 @@
         </div>
     </div>
 
-    <!-- display for computing categories -->
-    <div id="Computing" class="info" visibility="hidden">
-        <div class="spacer"></div>
-        <div id="title" class="itemTitle">
-            Computer Equipment
-        </div>
-        <div class="itemBox">
-            <a href="https://bookit.dmc.jhu.edu/reserve/ComputerCables">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_ComputerCables.png" /> 
-            </a>
-            <br>
-            <div class="padding">
-                Cables &amp; Adapters
-            </div>
-        </div>
-        <div class="itemBox">
-            <a href="https://bookit.dmc.jhu.edu/reserve/DrawingTablets">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_DrawingTablets.png" /> 
-            </a>
-            <br>
-            <div class="padding">
-                Drawing Tablets &amp; Accessories
-            </div>
-        </div>
-        <div class="itemBox">
-            <a href="https://bookit.dmc.jhu.edu/reserve/FileStorage">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_FileStorage.png" /> 
-            </a>
-            <br>
-            <div class="padding">
-                File Storage &amp; Media Readers
-            </div>
-        </div>
-        <div class="itemBox">
-            <a href="https://bookit.dmc.jhu.edu/reserve/Laptops">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Laptops.png" /> 
-            </a>
-            <br>
-            <div class="padding">
-                Laptops &amp; Peripherals
-            </div>
-        </div>
-        <div class="spacer"></div>
+    <div id="cats" class="info">
+        Please select a category to get started.
     </div>
 
 </div>
+
 <script>
     function openNav() {
       document.getElementById("Sidebar").style.display = "block";
-      document.getElementById("Computing").style.display = "none"
-      document.getElementById("close").style.display = "block"
+      document.getElementById("cats").style.display = "none"
     }
     
     function closeNav() {
       document.getElementById("Sidebar").style.display = "none";
-      document.getElementById("Computing").style.display = "block"
-      document.getElementById("close").style.display = "none"
+      document.getElementById("cats").style.display = "block"
     }
 </script>

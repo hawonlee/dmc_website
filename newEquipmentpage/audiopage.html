@@ -1,5 +1,6 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     .menu_container {
         font-family: "Figtree", sans-serif;
@@ -102,7 +103,6 @@
     }
 
     .cardTitle {
-        background-color: rgb(255, 255, 255);
         width: 90%;
         height: 50px;
         text-align: left;
@@ -111,6 +111,19 @@
         margin: auto;
         text-decoration-color: #000;
         position: relative;
+    }
+
+    .itemTitle {
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: 50px;
+        text-align: left;
+        font-size: x-large;
+        align-content: center;
+        text-decoration-color: #000;
+        position: relative;
+        display: none;
+        padding-left: 20px;
     }
 
     .spacer {
@@ -195,11 +208,52 @@
         text-decoration-line: none;
         text-decoration-color: #000;
     }
+
+    .openbtn {
+        color: #000;
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        cursor: pointer;
+        display: none;
+        border: none;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .closebtn {
+        font-size: 50px;
+        color: #000;
+        text-align: right;
+        margin-right: 0;
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .openbtn {
+            display: block;
+        }
+        .sidebar {
+            width: 100%;
+            display: none;
+        }
+        .info {
+            display: block;
+        }
+        .itemTitle {
+            display: block;
+        }
+        
+    }
 </style>
 </head>
 
 <div class="menu_container">
+    <button id="open" class="openbtn" onclick="openNav()">&#9776;</button>
+    <!-- <a href="javascript:void(0);" class="openbtn" onclick="openNav()">
+        <i class="fa fa-bars"></i>
+      </a> -->
     <div id="Sidebar" class="sidebar">
+        <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="cardTitle">
             Section
         </div>
@@ -269,6 +323,9 @@
     <!-- display for audio categories -->
     <div id="Audio" class="info" visibility="visible">
         <div class="spacer"></div>
+        <div id="title" class="itemTitle">
+            Audio Equipment
+        </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/Headphones">
                 <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Headphones.png" />
@@ -354,3 +411,17 @@
     </div>
 
 </div>
+
+<script>
+    function openNav() {
+      document.getElementById("Sidebar").style.display = "block";
+      document.getElementById("Audio").style.display = "none"
+      document.getElementById("close").style.display = "block"
+    }
+    
+    function closeNav() {
+      document.getElementById("Sidebar").style.display = "none";
+      document.getElementById("Audio").style.display = "block"
+      document.getElementById("close").style.display = "none"
+    }
+</script>

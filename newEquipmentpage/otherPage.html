@@ -101,7 +101,6 @@
     }
 
     .cardTitle {
-        background-color: rgb(255, 255, 255);
         width: 90%;
         height: 50px;
         text-align: left;
@@ -179,11 +178,59 @@
         position: relative;
         cursor: grab;
     }
+
+    .openbtn {
+        color: #000;
+        width: 50px;
+        height: 50px;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        display: none;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .closebtn {
+        font-size: 50px;
+        color: #000;
+        text-align: right;
+        margin-right: 0;
+        display: none;
+    }
+    .itemTitle {
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: 50px;
+        text-align: left;
+        font-size: x-large;
+        align-content: center;
+        text-decoration-color: #000;
+        position: relative;
+        display: none;
+        padding-left: 20px;
+    }
+    @media (max-width: 768px) {
+        .openbtn {
+            display: block;
+        }
+        .sidebar {
+            width: 100%;
+            display: none;
+        }
+        .info {
+            display: block;
+        }
+        .itemTitle {
+            display: block;
+        }
+    }
 </style>
 </head>
 
 <div class="menu_container">
+    <button id="open" class="openbtn" onclick="openNav()">&#9776;</button>
     <div id="Sidebar" class="sidebar">
+        <a id="close" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <div class="cardTitle">
             Section
         </div>
@@ -253,6 +300,9 @@
     <!-- display for other categories -->
     <div id="Other" class="info" visibility="hidden">
         <div class="spacer"></div>
+        <div id="title" class="itemTitle">
+            Other Resources
+        </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/Bags">
                 <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Bags.png" /> 
@@ -275,3 +325,16 @@
     </div>
 
 </div>
+<script>
+    function openNav() {
+      document.getElementById("Sidebar").style.display = "block";
+      document.getElementById("Other").style.display = "none"
+      document.getElementById("close").style.display = "block"
+    }
+    
+    function closeNav() {
+      document.getElementById("Sidebar").style.display = "none";
+      document.getElementById("Other").style.display = "block"
+      document.getElementById("close").style.display = "none"
+    }
+</script>
