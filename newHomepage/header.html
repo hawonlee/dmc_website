@@ -9,6 +9,7 @@
             padding-left: 10px;
             padding-right: 10px;
             width: 87%;
+            max-width: 1350px;
         }
         .menu-bar {
             display: flex;
@@ -51,9 +52,16 @@
             text-decoration-color: white;
         }
 
+        @media (max-width: 1170px) {
+            .main-cont {
+                width: 100%;
+            }
+
+        }
+
         @media (max-width: 768px) {
             .main-cont {
-                /* width: 768px; */
+                width: 100%;
             }
             .menu-bar {
                 font-size: 14px;
