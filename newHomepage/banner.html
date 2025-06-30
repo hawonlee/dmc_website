@@ -2,7 +2,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <style type="text/css">
 
-    /*hawon's css*/
     .two-main-butts-cont {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -30,6 +29,10 @@
         font-size: large;
     }
 
+    a:hover .two-main-butts-cont {
+        text-decoration-line: none;
+    }
+
     .two-main-butts {
         width: 200px;
         height: 45px;
@@ -47,9 +50,12 @@
         background-color: #000;
     }
 
-    .two-main-butts div:hover {
-        background-color: white;
-        color: #000;
+    a:hover .two-main-butts {
+        background-color: white !important;
+        color: #000 !important;
+        text-decoration-line: none;
+        text-decoration: none;
+        text-decoration-color: #000;
     }
 
     .two-main-butts img {
@@ -59,13 +65,11 @@
         align-content: center;
         row-gap: 5px;
         margin: 0;
+        opacity: 1 !important;
     }
 
-
-        /*end of hawon's css*/
-
-    .imgclass {
-        opacity: .8;
+    a:hover .two-main-butts img {
+        display: none;
     }
 
     .spacer {
@@ -74,6 +78,10 @@
 
     .bg {
         background-color: black;
+    }
+    
+    .bg img {
+        opacity: .8;
     }
 
     .hero-text {
@@ -113,20 +121,14 @@
         to {opacity: 1}
     }
 
-    html {
-        scroll-behavior: smooth;
-    }
-
     a {
     text-decoration: none;
     text-shadow: none;
     text-transform: none;
-    color: black;
     }
 
     a :hover {
         text-decoration-line: none;
-        text-decoration-color:#000;
     }
 
     @media (max-width: 1000px) {
@@ -262,9 +264,7 @@
         }
     }
 
-    .two-main-butts-cont a:hover {
-        text-decoration-line: none;
-    }
+
 
     </style>
 </head>
@@ -272,7 +272,7 @@
     <div class="slideshow-container">
         <div class="mySlides fade">
             <div class="bg">
-                <img class="imgclass" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/duck1.png" style="width:100%">
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/duck1.png" style="width:100%">
                 <div class="hero-text">
                     <b>Welcome to BookIt!</b>
                     <div class="spacer"></div>
@@ -302,7 +302,7 @@
 
         <div class="mySlides fade">
             <div class="bg">
-                <img class="imgclass" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/duck2.png" style="width:100%">
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/duck2.png" style="width:100%">
                 <div class="hero-text">
                     <b>Welcome to BookIt!</b>
                     <div class="spacer"></div>
@@ -332,7 +332,7 @@
 
         <div class="mySlides fade">
             <div class="bg">
-                <img class="imgclass" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/duck3.png" style="width:100%">
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/duck3.png" style="width:100%">
                 <div class="hero-text">
                     <b>Welcome to BookIt!</b>
                     <div class="spacer"></div>

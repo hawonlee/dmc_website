@@ -42,7 +42,7 @@
         margin: auto;
         text-decoration-color: #000;
         position: relative;
-        cursor: grab;
+        cursor: pointer;
     }
 
     .cardTop {
@@ -58,7 +58,7 @@
         margin: auto;
         text-decoration-color: #000;
         position: relative;
-        cursor: grab;
+        cursor: pointer;
     }
 
     .cardSelect {
@@ -75,7 +75,7 @@
         margin: auto;
         color: #ffffff;
         position: relative;
-        cursor: grab;
+        cursor: pointer;
     }
 
     .cardSelect img {
@@ -127,7 +127,8 @@
     }
 
     .spacer {
-        height: 30px;
+        height: 29px;
+        width: 100%;
     }
 
     .spacerX {
@@ -140,8 +141,8 @@
     }
 
     .itemBox {
-        height: 300px;
-        width: 250px;
+        height: 250px;
+        width: 300px;
         border: 1px solid rgb(193, 193, 193);
         border-radius: 10px;
         text-decoration-color: #000000;
@@ -156,9 +157,10 @@
     .itemBox img {
         display: block;
         margin: auto;
-        padding-top: 10px;
-        height: 85%;
-        width: 90%;        
+        height: 200px;
+        width: 100%;        
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
     }
 
     a {
@@ -192,7 +194,7 @@
         margin: auto;
         color: #ffffff;
         position: relative;
-        cursor: grab;
+        cursor: pointer;
     }
 
     .help a:hover {
@@ -241,6 +243,9 @@
         }
         .itemTitle {
             display: block;
+        }
+        .spacer {
+            display: none;
         }
         
     }
@@ -322,10 +327,10 @@
 
     <!-- display for audio categories -->
     <div id="Audio" class="info" visibility="visible">
-        <div class="spacer"></div>
         <div id="title" class="itemTitle">
             Audio Equipment
         </div>
+        <div class="spacer"></div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/Headphones">
                 <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/Headphones_optimized_5000.jpg" />
@@ -337,7 +342,7 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/AudioCables">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_AudioCables.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/cables.JPG" /> 
             </a>
             <br>
             <div class="padding">
@@ -346,16 +351,16 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/MicStands">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_MicStands.png" />
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/micStand1.JPG" />
             </a>
             <br>
             <div class="padding">
-                Mic Stands
+                Mic Stands &amp; Accessories
             </div>
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/Microphones">
-                <img class="grid-item-image" src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Microphones.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/mic1.JPG" /> 
             </a>
             <br>
             <div class="padding">
@@ -364,7 +369,7 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/MIDIControllers">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_MIDIControllers.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/midi.JPG" /> 
             </a>
             <br>
             <div class="padding">
@@ -373,7 +378,7 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/Mixers">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Mixers.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/mixer.JPG" /> 
             </a>
             <br>
             <div class="padding">
@@ -382,7 +387,7 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/Speakers">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_Speakers.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/pasystem.JPG" /> 
             </a>
             <br>
             <div class="padding">
@@ -391,7 +396,7 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/AudioInterfaces">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_AudioInterfaces.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/recorder2.JPG" /> 
             </a>
             <br>
             <div class="padding">
@@ -400,28 +405,40 @@
         </div>
         <div class="itemBox">
             <a href="https://bookit.dmc.jhu.edu/reserve/VideoProdAudioAccessories">
-                <img src="https://libapps.s3.amazonaws.com/customers/9396/images/gridicon_VideoProdAudioAccessories.png" /> 
+                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/videoProd.JPG" /> 
             </a>
             <br>
             <div class="padding">
                 Video Production Accessories
             </div>
         </div>
-        <div class="spacer"></div>
     </div>
 
 </div>
 
 <script>
+    //open sidebar which is auto hidden for smaller screens
     function openNav() {
       document.getElementById("Sidebar").style.display = "block";
       document.getElementById("Audio").style.display = "none"
       document.getElementById("close").style.display = "block"
     }
     
+    //close sidebar which is auto hidden for smaller screens
     function closeNav() {
       document.getElementById("Sidebar").style.display = "none";
       document.getElementById("Audio").style.display = "block"
       document.getElementById("close").style.display = "none"
     }
+
+    //working to fix window resizing issue
+    // window.addEventListener('resize', function() {
+    // // Code to execute when the screen size changes
+    // if (window.innerWidth > 768) {
+    //     document.getElementById("Sidebar").style.display = "block"
+    //     document.getElementById("info").style.display = "block"
+    //     document.getElementById("itemTitle").style.display = "none"
+    //     document.getElementsByClassName("spacer").style.display = "none"
+    // }
+    // });
 </script>
