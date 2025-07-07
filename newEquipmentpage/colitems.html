@@ -1,6 +1,6 @@
 <!-- equipment vs inlab navigation -->
  <div >
-        <a id="link" href="https://bookit.dmc.jhu.edu/reserve/spaces/dmc">
+        <a id="link" href="https://bookit.cmc.jhu.edu/reserve/spaces/cmc">
             <div id="navigate">
                 Go to In-lab Resources
             </div>
@@ -8,15 +8,15 @@
 </div>
 <script>
     var addEquipOrLabBtn = function() {
-        // If on an equipment item page (URL="https://bookit.dmc.jhu.edu/reserve/equipment/dmc...")
+        // If on an equipment item page (URL="https://bookit.cmc.jhu.edu/reserve/equipment/dmc...")
         let naviBtn = document.getElementById("navigate")
         let linkBtn = document.getElementById("link")
-        if (/https:\/\/bookit\.dmc\.jhu\.edu\/reserve\/equipment\/dmc/.test(window.location.href)) {
+        if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/equipment\/cmc/.test(window.location.href)) {
             naviBtn.textContent = "Go to In-Lab Resources"
-            linkBtn.href = "https://bookit.dmc.jhu.edu/reserve/spaces/dmc"
-        } else if (/https:\/\/bookit\.dmc\.jhu\.edu\/reserve\/spaces\/dmc/.test(window.location.href)) {
+            linkBtn.href = "https://bookit.cmc.jhu.edu/reserve/spaces/dmc"
+        } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/spaces\/cmc/.test(window.location.href)) {
             naviBtn.textContent = "Go to Equipment"
-            linkBtn.href = "https://bookit.dmc.jhu.edu/passes/equipment"
+            linkBtn.href = "https://bookit.cmc.jhu.edu/passes/equipment"
         }
     
     };
