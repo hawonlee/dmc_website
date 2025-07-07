@@ -3,6 +3,8 @@
 /* Public Full and Mini Calendar Widget */
 
 /*Embeddable mini-calendar - from Widgets/API section */
+/* tried to change CSS settings for the LibCal Calendar Widget*/
+/* did not work */
 
 #mini-calendar { 
     border: 3px solid #066A9E; 
