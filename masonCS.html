@@ -69,7 +69,7 @@ Date Created: 01/11/2023
 
 // Check for authed items on equipment pages only
 // (to preserve resources on other pages)
-if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||  /^https:\/\/bookit\.dmc\.jhu\.edu\/reserve/.test(window.location.href)) {
+if(/^https:\/\/bookit\.cmc\.jhu\.edu\/equipment\?/.test(window.location.href) ||  /^https:\/\/bookit\.cmc\.jhu\.edu\/reserve/.test(window.location.href)) {
     // Create auth banner template element that can be inserted
     var authBanner = document.createElement("span");
     authBanner.classList.add("auth-banner");
@@ -201,7 +201,7 @@ Date Created: 01/17/2023
 
 // Check for authed items on equipment pages only
 // (wrapped like this to preserve resources on other pages)
-if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.href)) {
+if(/^https:\/\/bookit\.cmc\.jhu\.edu\/equipment\/item\//.test(window.location.href)) {
     // get the equipment ID from the end of the URL
     var equipmentID = window.location.href.split("/").pop();
     // check if the equipment ID is in the masterAuthList
@@ -211,7 +211,7 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.hr
         authDisclaimer.classList.add("auth-disclaimer");
         // Disclaimer text
         var disclaimerText = "<p><strong>This item requires a one-time authorization before you can make a reservation.</strong> ";
-        disclaimerText += "To get authorized, come to the DMC anytime we're open and ask to get trained at the front desk. ";
+        disclaimerText += "To get authorized, come to the CMC anytime we're open and ask to get trained at the front desk. ";
         disclaimerText += "If you are unsure of your authorization status, click the button to view a list of your trainings alongside your membership status.</p>";
         authDisclaimer.innerHTML = disclaimerText;
         // Disclaimer button to check authorization status
@@ -312,7 +312,7 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.hr
 
 <!-- STAFF LOGIN TEXT CHANGE -->
 <script>
-// Script to change the text "Login to LibApps" to "DMC Staff Login"
+// Script to change the text "Login to LibApps" to "CMC Staff Login"
 // in the footer of the LibApps public pages
 
 // on DOM load, run the function
@@ -324,7 +324,7 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.hr
     // Be extra sure we have the right link
     if (loginLink[0].id == "s-lc-sign-in") {
         // Change the text
-        loginLink[0].innerHTML = "DMC Staff Login";
+        loginLink[0].innerHTML = "CMC Staff Login";
     };
 });
 </script>
@@ -338,7 +338,7 @@ if(/^https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\//.test(window.location.hr
 // on equipment item pages when the page loads.
 
 // If on an equipment item page (URL="https://bookit.cmc.jhu.edu/equipment/item/...")
-if (/https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\/.?/.test(window.location.href)) {
+if (/https:\/\/bookit\.cmc\.jhu\.edu\/equipment\/item\/.?/.test(window.location.href)) {
     console.log("Auto Collapse Other Items: On equipment item page")
     // On page load, call collapseOtherItems() function
     window.onload = collapseOtherItems;
@@ -442,16 +442,16 @@ var url = window.location.href;
 if (
     window.innerWidth > 768 && 
     (
-        /https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/item\/.?/.test(url) ||
-        /https:\/\/bookit\.dmc\.jhu\.edu\/space\/.?/.test(url)
+        /https:\/\/bookit\.cmc\.jhu\.edu\/equipment\/item\/.?/.test(url) ||
+        /https:\/\/bookit\.cmc\.jhu\.edu\/space\/.?/.test(url)
     )
 ){
     addColumnResizerDynamic();
 // else if on equipment of space category page
 } else if (
-    /https:\/\/bookit\.dmc\.jhu\.edu\/reserve.?/.test(url) ||
-    /https:\/\/bookit\.dmc\.jhu\.edu\/spaces.?/.test(url) ||
-    /https:\/\/bookit\.dmc\.jhu\.edu\/equipment\/.?/.test(url)
+    /https:\/\/bookit\.cmc\.jhu\.edu\/reserve.?/.test(url) ||
+    /https:\/\/bookit\.cmc\.jhu\.edu\/spaces.?/.test(url) ||
+    /https:\/\/bookit\.cmc\.jhu\.edu\/equipment\/.?/.test(url)
 ) {
     addColumnResizerDynamic();
 } ;
@@ -927,7 +927,7 @@ if(
 
 /* Individual image ratios */
 
-#discover-dmc {
+#discover-cmc {
     flex-basis: 27%;
 }
 #bookit-bubble {
@@ -937,7 +937,7 @@ if(
     flex-basis: 15%;
 }
 
-#discover-dmc-mobile {
+#discover-cmc-mobile {
     display: none;
 }
 
@@ -958,7 +958,7 @@ if(
     }
     
     /* Mobile Formatting */
-    #discover-dmc {
+    #discover-cmc {
         flex-basis: 0%;
     }
     #bookit-bubble {
@@ -968,12 +968,12 @@ if(
         flex-basis: 23%;
     }
 
-    #discover-dmc-mobile {
+    #discover-cmc-mobile {
         display: block;
         padding-top: 10px;
         margin-bottom: -20px;
     }
-    #discover-dmc-mobile img {
+    #discover-cmc-mobile img {
         max-width: 100%;
     }
 }

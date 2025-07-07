@@ -1,4 +1,4 @@
-# dmc_website
+# cmc_website
 
 ### Contents of each file:
 

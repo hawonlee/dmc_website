@@ -200,15 +200,15 @@
         let firstBtn = document.getElementById("first")
         let faqBtn = document.getElementById("faq")
         let calBtn = document.getElementById("calendar")
-        if (/https:\/\/bookit\.dmc\.jhu\.edu\/passes\/first-time/.test(window.location.href)) {
+        if (/https:\/\/bookit\.cmc\.jhu\.edu\/passes\/first-time/.test(window.location.href)) {
             firstBtn.className += " active"
             faqBtn.className.replace(" active", "")
             calBtn.className.replace(" active", "")
-        } else if (/https:\/\/bookit\.dmc\.jhu\.edu\/passes\/faq/.test(window.location.href)) {
+        } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/passes\/faq/.test(window.location.href)) {
             faqBtn.className += " active"
             firstBtn.className.replace(" active", "")
             calBtn.className.replace(" active", "")
-        } else if (/https:\/\/bookit\.dmc\.jhu\.edu\/calendar/.test(window.location.href)) {
+        } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/calendar/.test(window.location.href)) {
             calBtn.className += " active"
             faqBtn.className.replace(" active", "")
             firstBtn.className.replace(" active", "")

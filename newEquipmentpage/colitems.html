@@ -8,12 +8,12 @@
 </div>
 <script>
     var addEquipOrLabBtn = function() {
-        // If on an equipment item page (URL="https://bookit.cmc.jhu.edu/reserve/equipment/dmc...")
+        // If on an equipment item page (URL="https://bookit.cmc.jhu.edu/reserve/equipment/cmc...")
         let naviBtn = document.getElementById("navigate")
         let linkBtn = document.getElementById("link")
         if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/equipment\/cmc/.test(window.location.href)) {
             naviBtn.textContent = "Go to In-Lab Resources"
-            linkBtn.href = "https://bookit.cmc.jhu.edu/reserve/spaces/dmc"
+            linkBtn.href = "https://bookit.cmc.jhu.edu/reserve/spaces/cmc"
         } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/spaces\/cmc/.test(window.location.href)) {
             naviBtn.textContent = "Go to Equipment"
             linkBtn.href = "https://bookit.cmc.jhu.edu/passes/equipment"
