@@ -17,8 +17,18 @@
         font-family: "Figtree", sans-serif;
     }
 
+    .infoBars img {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
     .infoBars p {
-        font-size: 14px;
+        font-size: 16px;
         color: rgb(90, 90, 90);
         line-height: 1.5;
         margin-top: 5px;
@@ -26,6 +36,30 @@
 
     .infoBars h1 {
         font-size: 24px;
+    }
+
+    .boxQ {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 25%;
+    }
+
+    .box {
+        flex-direction: column;
+        text-align: left;
+        width: 50%;
+        height: 100%;
+        font-size: 16px;
+    }
+
+    .box li {
+        padding-left: 35%;
+    }
+
+    .box li:hover {
+        text-decoration: underline black;
+        cursor: pointer;
     }
 
     .step-container {
@@ -102,6 +136,10 @@
 
         #title-short {
             display: inline;
+            text-align: center;
+        }
+        .box li {
+            padding-left: 10%;
         }
     }
 
@@ -114,6 +152,9 @@
         .infoBars-hideShow {
             font-size: 80%;
         }
+        .box li {
+        padding-left: 2%;
+    }
     }
 
     @media (max-width: 300px) {
@@ -124,6 +165,9 @@
         .infoBars-hideShow {
             font-size: 70%;
         }
+        .box li {
+        padding-left: 0;
+    }
     }
 
     .s-lc-avail-content {
@@ -140,14 +184,37 @@
 <div class="main-cont">
     <div class="infoBars">
         <div class="infoBars-content">
+            <h1 id="title-long" >Frequently Asked Questions</h1>
+            <h1 id="title-short" style="text-align: center; font-size: 64px;">FAQ</h1>
+            <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/faqQuack.png">
+            <div class="boxQ">
+                <div class="box">
+                    <h2 style="text-align: center;">
+                        Booking FAQs
+                    </h2>
+                    <li id="q4">How long can I book out items?</li>
+                    <li id="q5">How do I renew my booking?</li>
+                    <li id="q6">Why can't I book an item?</li>
+                    <li id="q7">How do I print at the CMC?</li>
+                    <li id="q8">How do I 3D-print at the CMC?</li>
+                    <li id="q9">How do I check out a camera at the CMC?</li>
 
-        <h1 id="title-long">Frequently Asked Questions</h1>
-        <h1 id="title-short">FAQ</h1>
+                </div>
+                <div class="box">
+                    <h2 style="text-align: center;">
+                        Membership FAQs
+                    </h2>
+                    <li id="q1">What is the CMC?</li>
+                    <li id="q2">Who can use the CMC?</li>
+                    <li id="q3">How do I become a member?</li>
+                </div>
+            </div>
+            <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/bottomFAQquack.png">
             <div class="step-container">
                 <!-- Step 1 -->
                 <div class="step" >
                     <div class="step-header">
-                        <div class="step-number">1</div>
+                        <div id="a1" class="step-number">1</div>
                         <h2>What is the CMC?</h2>
                     </div>
                     <p>The Creative Media Center (CMC) is a multimedia lab space and
@@ -160,7 +227,7 @@
                 <!-- Step 2 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">2</div>
+                        <div id="a2" class="step-number">2</div>
                         <h2>Who can use the CMC?</h2>
                     </div>
                     <p> Individuals must become members of the CMC in order to use the resources available.
@@ -187,7 +254,7 @@
                 <!-- Step 3 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">3</div>
+                        <div id="a3" class="step-number">3</div>
                         <h2>How do I become a member?</h2>
                     </div>
                     <p>If you are an eligible student, come into the CMC anytime we
@@ -208,7 +275,7 @@
                 <!-- Step 4 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">4</div>
+                        <div id="a4" class="step-number">4</div>
                         <h2>How long can I book out items?</h2>
                     </div>
                     <p>Up to 3 days upon making your initial booking, with up to
@@ -224,7 +291,7 @@
                 <!-- Step 5 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">5</div>
+                        <div id="a5" class="step-number">5</div>
                         <h2>How do I renew my booking?</h2>
                     </div>
                     <p>To renew your items for 1 additional day, first check that
@@ -237,21 +304,26 @@
                 <!-- Step 6 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">6</div>
-                        <h2>How do I get authorized on equipment?</h2>
+                        <div id="a6" class="step-number">6</div>
+                        <h2>Why can't I book an item?</h2>
                     </div>
-                    <p>Be a CMC member and ask one of our staff members which item
-                        you'd like authorizations on. As long as a qualified staffer and
-                        the equipment are available, we will then train you on how to
-                        use it which usually includes a short video and a one-on-one
-                        hands-on training. We may ask that you make an appointment for more
-                        advanced items like the Audio Studio.
+                    <p>
+                        Only members of the CMC are able to book and reserve items. If you
+                        are a member of the CMC, check whether or not this specific item requires
+                        and authorization for use. Items with a purple border around them require authorization.
+                        The same applies to In-Lab resources.
+                        <br><br>
+                        Please keep in mind that some categories may need multiple authorizations, such as the camera kits.
+                        Intro level cameras and advanced level cameras require different trainings.
+                        <br><br>
+                        If you would like to be authorized on a specific In-Lab Resource, please call the CMC ahead of time so 
+                        that student staff are able to book the space when you are available for the training.
                     </p>
                 </div>
                 <!-- Step 7 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">7</div>
+                        <div id="a7" class="step-number">7</div>
                         <h2>How do I print at the CMC?</h2>
                     </div>
                     <p>
@@ -268,7 +340,7 @@
                 <!-- Step 8 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">8</div>
+                        <div id="a8" class="step-number">8</div>
                         <h2>How do I 3D-print at the CMC?</h2>
                     </div>
                     <p>
@@ -282,7 +354,7 @@
                 <!-- Step 9 -->
                 <div class="step">
                     <div class="step-header">
-                        <div class="step-number">9</div>
+                        <div id="a9" class="step-number">9</div>
                         <h2>How do I check out a camera at the CMC?</h2>
                     </div>
                     <p>
@@ -301,3 +373,32 @@
         </div>
     </div>
 </div>
+<script>
+    document.getElementById("q1").onclick = function () {
+        window.location.hash='a1';
+    }
+    document.getElementById("q2").onclick = function () {
+        window.location.hash='a2';
+    }
+    document.getElementById("q3").onclick = function () {
+        window.location.hash='a3';
+    }
+    document.getElementById("q4").onclick = function () {
+        window.location.hash='a4';
+    }
+    document.getElementById("q5").onclick = function () {
+        window.location.hash='a5';
+    }
+    document.getElementById("q6").onclick = function () {
+        window.location.hash='a6';
+    }
+    document.getElementById("q7").onclick = function () {
+        window.location.hash='a7';
+    }
+    document.getElementById("q8").onclick = function () {
+        window.location.hash='a8';
+    }
+    document.getElementById("q9").onclick = function () {
+        window.location.hash='a9';
+    }
+</script>
