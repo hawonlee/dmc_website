@@ -7,7 +7,7 @@
 /* did not work */
 
 #mini-calendar { 
-    border: 3px solid #066A9E; 
+    border: 3px solid #000000; 
     padding: 2px; 
     -webkit-border-radius: 5px; 
     -moz-border-radius: 5px; 
@@ -34,7 +34,7 @@
 }
 .cal-mini-title {text-align: center; color: #362E2C; font: bold 14px;
 }
-.cal-mini-day-head { color: #7F7F7F; text-align: center; font-size: 12px; font-weight: bold; 
+.cal-mini-day-head { color: #000000; text-align: center; font-size: 12px; font-weight: bold; 
 }
 .cal-mini-arrow { text-align: center!important; font-size: 16px;
 }

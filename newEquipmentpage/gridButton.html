@@ -1,7 +1,37 @@
 <!-- equipment vs inlab navigation -->
- <div >
-        <a id="link" href="https://bookit.cmc.jhu.edu/reserve/spaces/cmc">
-            <div id="navigate">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+
+    .font {
+        display: flex;
+        font-family: "Figtree", sans-serif;
+        background-color: black;
+        height: 45px;
+        width: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+
+    .font a {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        /* padding-top: 10px; */
+    }
+
+</style>
+</head>
+ <div class="font">
+        <a id="link" href="https://bookit.cmc.jhu.edu/passes/in-lab">
+            <div id="navigate" style="color: white;">
                 Go to In-lab Resources
             </div>
         </a>
@@ -13,8 +43,8 @@
         let linkBtn = document.getElementById("link")
         if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/equipment\/cmc/.test(window.location.href)) {
             naviBtn.textContent = "Go to In-Lab Resources"
-            linkBtn.href = "https://bookit.cmc.jhu.edu/reserve/spaces/cmc"
-        } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/spaces\/cmc/.test(window.location.href)) {
+            linkBtn.href = "https://bookit.cmc.jhu.edu/passes/in-lab"
+        } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/reserve\/cmc/.test(window.location.href)) {
             naviBtn.textContent = "Go to Equipment"
             linkBtn.href = "https://bookit.cmc.jhu.edu/passes/equipment"
         }

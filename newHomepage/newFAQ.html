@@ -8,6 +8,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: "Figtree", sans-serif;
     }
 
     .infoBars {
@@ -35,7 +36,7 @@
     }
 
     .infoBars h1 {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .boxQ {
@@ -51,10 +52,11 @@
         width: 50%;
         height: 100%;
         font-size: 16px;
+        padding-left: 15px;
     }
 
-    .box li {
-        padding-left: 35%;
+    .box h1 {
+        font-size: 32px;
     }
 
     .box li:hover {
@@ -114,6 +116,32 @@
         display: none;
     }
 
+    #quack {
+        display: none;
+    }
+
+    /* button code from w3schools */
+    #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: rgb(0, 0, 0); /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+        background-color: #ffd000;
+        color: #000000;
+    }
+
 
     @media (max-width: 1500px) {
         .infoBars-content {
@@ -127,7 +155,7 @@
         }
 
         .infoBars-title {
-            font-size: 90%;
+            font-size: 32px;
         }
 
         #title-long {
@@ -143,19 +171,40 @@
         }
     }
 
+    @media (max-width: 465px) {
+        .boxQ {
+            display: none;
+        }
+        .infoBars-title {
+            font-size: 52px;
+        }
+
+        #quack {
+            display: block;
+        }
+        #topquack {
+            display: none;
+        }
+        #botquack {
+            display: none;
+        }
+    }
+
     @media (max-width: 350px) {
 
         .infoBars-title {
-            font-size: 80%;
+            font-size: 32px;
         }
 
         .infoBars-hideShow {
-            font-size: 80%;
+            font-size: 32px;
         }
-        .box li {
-        padding-left: 2%;
+        .boxQ {
+            display: none;
+        }
     }
-    }
+
+    
 
     @media (max-width: 300px) {
         .infoBars-title {
@@ -165,9 +214,9 @@
         .infoBars-hideShow {
             font-size: 70%;
         }
-        .box li {
-        padding-left: 0;
-    }
+        .boxQ {
+            display: none;
+        }
     }
 
     .s-lc-avail-content {
@@ -182,34 +231,38 @@
 </head>
 
 <div class="main-cont">
+    
     <div class="infoBars">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/keyboard_arrow_up.png">
+        </button>
         <div class="infoBars-content">
             <h1 id="title-long" >Frequently Asked Questions</h1>
-            <h1 id="title-short" style="text-align: center; font-size: 64px;">FAQ</h1>
-            <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/faqQuack.png">
+            <h1 id="title-short">FAQ</h1>
+            <img id="topquack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/3DFAQquack.png">
+            <img id="quack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/Quack_Wave_ALPHA.png">
             <div class="boxQ">
                 <div class="box">
-                    <h2 style="text-align: center;">
+                    <h1>
                         Booking FAQs
-                    </h2>
+                    </h1>
                     <li id="q4">How long can I book out items?</li>
                     <li id="q5">How do I renew my booking?</li>
                     <li id="q6">Why can't I book an item?</li>
                     <li id="q7">How do I print at the CMC?</li>
                     <li id="q8">How do I 3D-print at the CMC?</li>
                     <li id="q9">How do I check out a camera at the CMC?</li>
-
                 </div>
                 <div class="box">
-                    <h2 style="text-align: center;">
+                    <h1>
                         Membership FAQs
-                    </h2>
+                    </h1>
                     <li id="q1">What is the CMC?</li>
                     <li id="q2">Who can use the CMC?</li>
                     <li id="q3">How do I become a member?</li>
                 </div>
             </div>
-            <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/bottomFAQquack.png">
+            <img id="botquack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/bottomFAQquack.png">
             <div class="step-container">
                 <!-- Step 1 -->
                 <div class="step" >
@@ -400,5 +453,25 @@
     }
     document.getElementById("q9").onclick = function () {
         window.location.hash='a9';
+    }
+
+    // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
