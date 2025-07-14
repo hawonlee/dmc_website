@@ -5,7 +5,6 @@
 **newEquipmentPage** : contains all files for the new equipment pages at the CMC (Author: Carly)
 
     - audioPage.html: pictures and links to all audio equipment category 
-    - gridButton.html: code for having a small button generate on general LibCal pages with equipment/in lab spaces in the LibCal grid form
     - compPage.html: pictures and links to all computer equipment category
     - equipmentStart.html: start page for all of the equipment
     - gamingPage.html: pictures and links to all gaming equipment category
