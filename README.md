@@ -1,4 +1,4 @@
-# Creative Media Center New Website -
+# Creative Media Center New Website
 
 ### Contents of each folder:
 

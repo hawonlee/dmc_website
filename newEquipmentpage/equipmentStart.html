@@ -26,7 +26,7 @@
         background-color: rgb(255, 255, 255);
         width: 75%;
         height:fit-content;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         flex-wrap: wrap;
         text-align: left;
@@ -127,30 +127,8 @@
         padding-left: 10px;
     }
 
-    .itemBox {
-        height: 300px;
-        width: 250px;
-        border: 1px solid rgb(193, 193, 193);
-        border-radius: 10px;
-        text-decoration-color: #000000;
-        background-color: #ffffff;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 15px;
-        margin-right: 15px;
-        padding-bottom: 5px;
-    }
-
-    .itemBox img {
-        display: block;
-        margin: auto;
-        padding-top: 10px;
-        height: 85%;
-        width: 90%;        
-    }
-
     .help {
-
+        
     }
 
     a {
@@ -181,18 +159,33 @@
     }
 
     .boxQ {
+        display: flex;
         flex-direction: row;
         width: 100%;
         height: 25%;
     }
 
-    .boxQ img {
-        width: 250px;
+    .itemBox {
         height: 150px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 15px;
+        width: 265px;
+        border: 1px solid rgb(255, 255, 255);
         border-radius: 10px;
+        text-decoration-color: #000000;
+        background-color: #ffffff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: center;
+
+    }
+
+    .itemBox img {
+        display: block;
+        margin: auto;
+        height: 100%;
+        width: 100%;        
+        border-radius: 5px;
     }
 
     @media (max-width: 768px) {
@@ -291,21 +284,38 @@
             <b>Equipment: </b> <u>Items</u> that members of the CMC are allowed to make bookings for both in space use and
              take home use, such as:
             <div class="boxQ">
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/camera.JPG">
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/cables.JPG">
-                <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/controllers2.JPG">
+                <div class="itemBox">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/camQuack9.png">
+                    Cameras
+                </div>
+                <div class="itemBox">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/headphonesQuack5.png">
+                    Headphones
+                </div>
+                <div class="itemBox">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/gameQuack2.png">
+                    Game controllers
+                </div>
             </div>
-            <li>Cameras</li>
-            <li>Cables</li>
-            <li>Game controllers</li>
         </div>
         <br>
         <div style="text-align: left;">
             <b>In-Lab Resources: </b> <u>Spaces</u> that members of the CMC are allowed to make bookings for. All items within 
             these spaces must stay at the CMC. Examples are:
-            <li>Poster printers</li>
-            <li>Audio Studio</li>
-            <li>Gaming Lab</li>
+            <div class="boxQ">
+                <div class="itemBox">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/printerQuack2.png">
+                    Poster printers
+                </div>
+                <div class="itemBox">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/sewingQuack.png">
+                    Fiber Studio
+                </div>
+                <div class="itemBox">
+                    <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/3DprinterQuack2.png">
+                    3D printers
+                </div>
+            </div>
         </div>
     </div>
 
