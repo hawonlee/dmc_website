@@ -186,6 +186,9 @@
                     <a id="faq" href="https://bookit.cmc.jhu.edu/passes/faq">
                         <div>FAQ</div>
                     </a>
+                    <a id="policy" href="https://bookit.cmc.jhu.edu/passes/policy">
+                        <div>Policy</div>
+                    </a>
                     <a id="calendar" href="https://bookit.cmc.jhu.edu/calendar?cid=21643">
                         <div>Calendar</div>
                     </a>
@@ -200,18 +203,27 @@
         let firstBtn = document.getElementById("first")
         let faqBtn = document.getElementById("faq")
         let calBtn = document.getElementById("calendar")
+        let policyBtn = document.getElementById("policy")
         if (/https:\/\/bookit\.cmc\.jhu\.edu\/passes\/first-time/.test(window.location.href)) {
             firstBtn.className += " active"
             faqBtn.className.replace(" active", "")
             calBtn.className.replace(" active", "")
+            policyBtn.className.replace(" active", "")
         } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/passes\/faq/.test(window.location.href)) {
             faqBtn.className += " active"
             firstBtn.className.replace(" active", "")
             calBtn.className.replace(" active", "")
+            policyBtn.className.replace(" active", "")
         } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/calendar/.test(window.location.href)) {
             calBtn.className += " active"
             faqBtn.className.replace(" active", "")
             firstBtn.className.replace(" active", "")
+            policyBtn.className.replace(" active", "")
+        } else if (/https:\/\/bookit\.cmc\.jhu\.edu\/passes\/policy/.test(window.location.href)) {
+            policyBtn.className += " active"
+            faqBtn.className.replace(" active", "")
+            firstBtn.className.replace(" active", "")
+            calBtn.className.replace(" active", "")
         }
     
     };
