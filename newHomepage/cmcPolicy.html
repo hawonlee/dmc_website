@@ -1,0 +1,374 @@
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    /* InfoBars formatting */
+
+    .main-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Figtree", sans-serif;
+    }
+    h2 {
+        padding-bottom: 5px;
+    }
+
+    .infoBars {
+        color: black;
+        text-align: left;
+        justify-items: center;
+        font-family: "Figtree", sans-serif;
+    }
+
+    .infoBars img {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .infoBars p {
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        line-height: 1.5;
+        margin-top: 5px;
+    }
+
+    .infoBars h1 {
+        font-size: 32px;
+    }
+
+    .boxQ {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 25%;
+    }
+
+    .box {
+        flex-direction: column;
+        text-align: left;
+        width: 50%;
+        height: 100%;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    .box h1 {
+        font-size: 32px;
+    }
+
+    .box li:hover {
+        text-decoration: underline black;
+        cursor: pointer;
+    }
+
+    .step-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+    
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: top;
+    }
+
+    .step-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .step p {
+        line-height: 1.5;
+        margin-top: 5px;
+        margin-left: 35px;
+        color: rgb(22, 22, 22);
+    }
+
+    .step-number {
+        background-color: #000000;
+        color: white;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .spacer {
+        height: 30px;
+    }
+
+    /* Shorten the title on mobile */
+    #title-short {
+        display: none;
+    }
+
+    #quack {
+        display: none;
+    }
+
+    /* button code from w3schools */
+    #myBtn {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: rgb(0, 0, 0); /* Set a background color */
+        color: white; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+        background-color: #ffd000;
+        color: #000000;
+    }
+
+    #hub {
+        width: 50%;
+        height: 50px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        font-family: "Figtree", sans-serif;
+    }
+    
+    #gaming {
+        width: 50%;
+        height: 50px;
+        text-align: center;
+        background-color: #000000;
+        color: white;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-size: 22px;
+        font-family: "Figtree", sans-serif;
+    }
+
+    @media (max-width: 1500px) {
+        .infoBars-content {
+            width: 85%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .infoBars-content {
+            width: 85%;
+        }
+
+        .infoBars-title {
+            font-size: 32px;
+        }
+
+        #title-long {
+            display: none;
+        }
+
+        #title-short {
+            display: inline;
+            text-align: center;
+        }
+        .box li {
+            padding-left: 10%;
+        }
+    }
+
+    @media (max-width: 465px) {
+        .boxQ {
+            display: none;
+        }
+        .infoBars-title {
+            font-size: 52px;
+        }
+
+        #quack {
+            display: block;
+        }
+        #topquack {
+            display: none;
+        }
+        #botquack {
+            display: none;
+        }
+    }
+
+    @media (max-width: 350px) {
+
+        .infoBars-title {
+            font-size: 32px;
+        }
+
+        .infoBars-hideShow {
+            font-size: 32px;
+        }
+        .boxQ {
+            display: none;
+        }
+    }
+
+    
+
+    @media (max-width: 300px) {
+        .infoBars-title {
+            font-size: 70%;
+        }
+
+        .infoBars-hideShow {
+            font-size: 70%;
+        }
+        .boxQ {
+            display: none;
+        }
+    }
+
+    .s-lc-avail-content {
+        display: none;
+    }
+
+    .s-lc-public-title {
+        display: none;
+    }
+
+</style>
+</head>
+
+<div class="main-cont">
+    
+    <div class="infoBars">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/keyboard_arrow_up.png">
+        </button>
+        <div class="infoBars-content">
+            <img id="topquack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/angryQuackHeader.png">
+            
+            <!-- quack that shows up on mobile version -->
+            <img id="quack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/3DfaqQuackLone.png">
+            <div class="boxQ">
+                <h1 id="title-long" >CMC Policies</h1>
+                <h1 id="title-short">Policies</h1>
+                <p>
+                    This document outlines policies and expectations for all CMC patrons. 
+                    When you become a CMC member, you agree to these terms as outlined in your 
+                    membership agreement. Violations of these policies, as well as violations of 
+                    JHU IT and conduct procedures, may result in consequences under our Three-Strike
+                        Policy (see below), including forfeiture of checkout privileges and/or access to
+                        the computer lab, gaming lounge, studios, and other CMC resources. 
+                </p>
+                <h1>
+                    Three-Strike Policy
+                </h1>
+                <p>
+                    We're committed to maintaining a safe, respectful, and collaborative environment for 
+                    all members. This policy ensures accountability while supporting you in learning from mistakes. 
+                </p>
+                <h2>Strike 1 - First Violation</h2>
+                <p>
+                    You will receive an email describing the violation and outlining the policy you did not
+                     follow. This is an opportunity to understand our expectations and correct your behavior.
+                      No immediate restrictions will be applied, but the violation will be documented. 
+                </p>
+                <h2>Strike 2 - Second Violation</h2>
+                <p>
+                    Your access to the CMC will be <b>temporarily restricted</b> until a required meeting with ProStaff 
+                    to discuss the situation and review expectations before you can return to the space and/or 
+                    resume using the resources in question. 
+                </p>
+                <h2>Strike 3 - Third Violation</h2>
+                <p>
+                   Your access to the CMC will be restricted for a <b>1 month minimum</b> following another required meeting
+                    with Prostaff. <b>All advanced equipment authorizations will be revoked </b>until ProStaff determines you
+                     have demonstrated a clear understanding of both the relevant policies and the safe, respectful use
+                      of our equipment and spaces following requests for re-authorization.
+                </p>
+                <p>
+                    <b>Additional violations</b> beyond this point will result in revocation of checkout privileges for 
+                    one semester. Consequences will carry over to the following semester. Semester recesses <b>will not</b>
+                     count towards an individual’s outstanding restriction duration.
+                </p>
+                <h2>
+                    Our Commitment to You
+                </h2>
+                <p>
+                    The spirit of these policies is rooted in respect for our staff, our community, and our shared creative
+                     environment. We're here to support your success at the CMC and want to help you use our resources safely
+                      and responsibly. 
+                </p>
+            </div>
+            <img id="botquack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/bottomAngryQuackheader.png">
+
+            <div style="display: flex; padding-top: 10px;">
+                <button onclick="showHub()" id="hub"><b>CMC Hub Policies</b></button>
+                <button onclick="showGame()" id="gaming"><b>CMC Gaming Lounge Policies</b></button>
+            </div>
+            <div class="step-container">
+                <div id="hubPolicy" class="step" style="visibility: visible; z-index: 1; position:absolute">
+                    <div class="step-header">
+                        <h1>
+                            CMC Hub Policies
+                        </h1>
+                    </div>
+                </div>
+                <div id="gamingPolicy" class="step" style="visibility: hidden; z-index: 2;">
+                    <div class="step-header">
+                        <h1>
+                            CMC Gaming Lounge Policies
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // Get the button:
+    let hubBtn = document.getElementById("hub");
+    let gameBtn = document.getElementById("gaming");
+    let hubPolicy = document.getElementById("hubPolicy");
+    let gamingPolicy = document.getElementById("gamingPolicy");
+
+    function showHub() {
+        hubPolicy.style.visibility = "visible";
+        gamingPolicy.style.visibility = "hidden";
+        hubBtn.style.backgroundColor = "white";
+        hubBtn.style.color = "black";
+        gameBtn.style.backgroundColor = "black";
+        gameBtn.style.color = "white";
+
+    }
+
+    function showGame() {
+        gamingPolicy.style.visibility = "visible";
+        hubPolicy.style.visibility = "hidden";
+        gameBtn.style.backgroundColor = "white";
+        gameBtn.style.color = "black";
+        hubBtn.style.backgroundColor = "black";
+        hubBtn.style.color = "white";
+
+    }
+</script>
