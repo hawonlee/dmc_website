@@ -158,6 +158,10 @@
         display: none;
     }
 
+    #mobilePolicy {
+        display: none;
+    }
+
     /* button code from w3schools */
     #myBtn {
         display: none; /* Hidden by default */
@@ -234,14 +238,6 @@
             font-size: 32px;
         }
 
-        #title-long {
-            display: none;
-        }
-
-        #title-short {
-            display: inline;
-            text-align: center;
-        }
         .box li {
             padding-left: 10%;
         }
@@ -251,6 +247,27 @@
         .boxQ {
             display: none;
         }
+        .step-container {
+            display: none;
+        }
+        
+        #title-long {
+            display: none;
+        }
+
+        #title-short {
+            display: inline;
+            text-align: center;
+        }
+
+        #mobilePolicy {
+            display: inline;
+        }
+
+        #policyBtns {
+            display: none !important;
+        }
+
         .infoBars-title {
             font-size: 52px;
         }
@@ -303,14 +320,6 @@
         display: none;
     }
 
-    /* footer {
-        display: inline;
-        position: relative;
-    }
-
-    .main {
-        visibility: hidden;
-    } */
 
 </style>
 </head>
@@ -324,9 +333,8 @@
             <!-- quack that shows up on mobile version -->
             <img id="quack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/angryQuack.png">
             <div class="boxQ">
-                <h1 id="title-long" >CMC Policies</h1>
-                <h1 id="title-short">Policies</h1>
-                <p>
+                <h1 id="title-long">CMC Policies</h1>
+                <p style="margin-bottom: 0;">
                     This document outlines policies and expectations for all CMC patrons. 
                     When you become a CMC member, you agree to these terms as outlined in your 
                     membership agreement. Violations of these policies, as well as violations of 
@@ -334,9 +342,6 @@
                         Policy (see below), including forfeiture of checkout privileges and/or access to
                         the computer lab, gaming lounge, studios, and other CMC resources. 
                 </p>
-                <h1>
-                    Use & Conduct
-                </h1>
                 <h2>
                     Compliance with Regulations
                 </h2>
@@ -352,6 +357,12 @@
                     , and may continue to use it in perpetuity if you agree (per piece of media)
                 </li>
                 <li style="margin-left: 35px;">Respecting intellectual property of other creators</li>
+                <h2>
+                    Community Expectations
+                </h2>
+                <li style="margin-left: 35px;">Be respectful of shared equipment and others' creative time</li>
+                <li style="margin-left: 35px;">Help maintain a clean, safe, and professional environment</li>
+                <li style="margin-left: 35px;">Follow JHU's Technology Use Policies and Code of Conduct</li>
                 <h1 style="margin-top: 20px;">
                     Three-Strike Policy
                 </h1>
@@ -394,10 +405,16 @@
             </div>
             <img id="botquack" src="https://d2jv02qf7xgjwx.cloudfront.net/customers/9396/images/bottomAngryQuackheader.png">
 
-            <div style="display: flex; padding-top: 10px;">
+            <div id="policyBtns" style="display: flex; padding-top: 10px;">
                 <button onclick="showEquip()" id="equip"><b>CMC Equipment Policies</b></button>
                 <button onclick="showHub()" id="hub"><b>CMC Hub Policies</b></button>
                 <button onclick="showGame()" id="gaming"><b>CMC Gaming Lounge Policies</b></button>
+            </div>
+            <h1 id="title-short">CMC Policies</h1>
+            <div id="mobilePolicy" class="step">
+                <p>Please refer to this
+                <a href="https://livejohnshopkins.sharepoint.com/:b:/s/CreativeMediaCenter-StuStaff/IQAFrCf2cr3zQJkc8EaA4xlQAYSh4tiIPDLjKYb3mj0qwhc?e=bNgdho">document</a> 
+                for CMC policies
             </div>
             <div class="step-container">
                 <div id="equipPolicy" class="step" style="visibility: visible; z-index: 0;">
@@ -405,9 +422,6 @@
                         <h1 style="margin-bottom: 10px;">
                             CMC Equipment Policies
                         </h1>
-                        <!-- <h2>
-                            Equipment Responsibility
-                        </h2> -->
                         <h2>
                             Accountability
                         </h2>
@@ -422,19 +436,7 @@
                             <li>Patrons are responsible for the condition of their booking upon leaving the CMC</li>
                             <li>All damaged equipment and parts will be returned to the CMC; patrons are <b>not</b> to keep any damaged items</li>
                             <li>CMC staff's judgement is final in all matters regarding equipment condition, return, and replacement fees</li>
-                        <h2>Replacement & Late Fines</h2>
-                            <li>Equipment kits <b>without</b> notice of damage or defficiencies <b>prior</b> to a patron's leave of the CMC with the kit
-                                will cause a patron to be subject to fines accordingly
-                            </li>
-                            <li>If a patron insists an item was missing upon check-out during check-in, and either no notice is found by CMC staff or the 
-                                patron admits to not checking the kit fully, the responsibility of the missing item <b>lies with the patron</b>
-                            </li>
-                            <li>You must pay, <b>in full</b>, the replacement cost of any piece of equipment or constituent parts that are lost, stolen
-                                , or damaged beyond repair, for all reasons and under any cicumstances while checked out under your name
-                            </li>
-                            <li>You must pay, <b>in full</b>, the cost of repair for equipment that is returned in a condition inferior to the 
-                                condition in which it was checked out</li>
-                        <!-- <h2 style="margin-top: 20px;">Check-In & Check-Out Procedure</h2> -->
+                                          
                         <h2>At Check-Out</h2>
                         <li>You must complete the checkout process yourself in person-you <b><u>cannot</u></b> have another person pick up equipment for you</li>
                         <li>You must inspect all equipment throroughly, referencing your receipt, with staff present</li>
@@ -446,9 +448,28 @@
                         <li>You must remain present while equipment is thoroughly inspected</li>
                         <li>Equipment will be considered late if returned after the check-in time specified on your reservation</li>
                         <li>Late fines may accrue on equipment, as determined by CMC staff</li>
-                        <!-- <h2 style="margin-top: 20px;">
-                            Booking & Reservation
-                        </h2> -->
+                        <li>Show up on time for returns; we reserve the right to refuse your return 5 minutes before our closing hours</li>
+
+                        <h2>Replacement & Late Fines</h2>
+                            <li>Equipment kits <b>without</b> notice of damage or defficiencies <b>prior</b> to a patron's leave of the CMC with the kit
+                                will cause a patron to be subject to fines accordingly
+                            </li>
+                            <li>If a patron insists an item was missing upon check-out during check-in, and either no notice is found by CMC staff or the 
+                                patron admits to not checking the kit fully, the responsibility of the missing item <b>lies with the patron</b>
+                            </li>
+                            <li>You must pay, <b>in full</b>, the replacement cost of any piece of equipment or constituent parts that are lost, stolen,
+                                 or damaged beyond repair, for all reasons and under any circumstances while checked out under your name
+                            </li>
+                            <li>You must pay, <b>in full</b>, the cost of repair for equipment that is returned in a condition inferior to the 
+                                condition in which it was checked out</li>
+                        
+                        <h2>Extensions</h2>
+                        <li>Extensions will <b><u>NOT</u></b> be granted for items that are marked as overdue in our system</li>
+                        <li>Extensions may be granted up to three times in one-day increments</li>
+                        <li>Patrons must call or email to request extensions; they will not automatically be granted by booking
+                             items back-to-back
+                        </li>
+                        <li>Patrons requesting a booking duration longer than 6 days must send their inquiries to CMC Prostaff</li>
                         <h2>
                             Fair Access
                         </h2>
@@ -485,48 +506,43 @@
                         <h2>
                             Printing & Cutting
                         </h2>
-                            <li>Printers and Printer Workstations</li>
-                            <li>All damaged equipment and parts will be returned to the CMC; patrons are <b>not</b> to keep any damaged items</li>
-                            <li>CMC staff's judgement is final in all matters regarding equipment condition, return, and replacement fees</li>
-                        <h2>Replacement & Late Fines</h2>
-                            <li>Equipment kits <b>without</b> notice of damage or defficiencies <b>prior</b> to a patron's leave of the CMC with the kit
-                                will cause a patron to be subject to fines accordingly
+                            <li><a href="https://bookit.cmc.jhu.edu/reserve/Printers">Printers</a> and 
+                                <a href="https://bookit.cmc.jhu.edu/reserve/InLabComputers">Printer Workstations</a> must both be booked in advance</li>
+                            <li>Allow time for setup, alignment, and drying; printing typically takes 1 - 1.5 hours per project</li>
+                            <li>Patrons are <b>not</b> allowed to change the paper themselves
                             </li>
-                            <li>If a patron insists an item was missing upon check-out during check-in, and either no notice is found by CMC staff or the 
-                                patron admits to not checking the kit fully, the responsibility of the missing item <b>lies with the patron</b>
+                            <li>Patrons may not bring in their own paper / material</li>
+                        <h2>Roll Trimmers & Paper Cutters</h2>
+                            <li>Use all tools safely and respectfully</li>
+                            <li>
+                                Only cut paper or poster media. Do not use with other materials
                             </li>
-                            <li>You must pay, <b>in full</b>, the replacement cost of any piece of equipment or constituent parts that are lost, stolen
-                                , or damaged beyond repair, for all reasons and under any cicumstances while checked out under your name
+                            <li>
+                                Return all tools to their designated locations
                             </li>
-                            <li>You must pay, <b>in full</b>, the cost of repair for equipment that is returned in a condition inferior to the 
-                                condition in which it was checked out</li>
-                        <!-- <h2 style="margin-top: 20px;">Check-In & Check-Out Procedure</h2> -->
-                        <h2>At Check-Out</h2>
-                        <li>You must complete the checkout process yourself in person-you <b><u>cannot</u></b> have another person pick up equipment for you</li>
-                        <li>You must inspect all equipment throroughly, referencing your receipt, with staff present</li>
-                        <li>You must confirm that the equipment is in good working order</li>
-                        <li>Note any existing deficiencies of the booking or signs of damage on equipment</li>
-                        <h2>At Check-In</h2>
-                        <li>You must return all equipment as whole kits-we will not accept the returns for part of a kit</li>
-                        <li>You must return your booking and <b>only</b> your booking-you <b><u>cannot</u></b> ask another person to return items for you</li>
-                        <li>You must remain present while equipment is thoroughly inspected</li>
-                        <li>Equipment will be considered late if returned after the check-in time specified on your reservation</li>
-                        <li>Late fines may accrue on equipment, as determined by CMC staff</li>
-                        <!-- <h2 style="margin-top: 20px;">
-                            Booking & Reservation
-                        </h2> -->
-                        <h2>
-                            Fair Access
-                        </h2>
-                        <p>
-                            Avoid making back-to-back bookings in order to facilitate more CMC patrons being able to use the equipment.
-                             We're committed to ensuring equitable access to resources for all students, and we reserve the right to cancel 
-                             your booking if we notice it has become a re-occuring issue.
-                        </p>
-                        <h2>Reservations</h2>
-                        <p style="margin-bottom: 30px;">
-                            Reservations can be made through our online booking system at <a href="https://bookit.cmc.jhu.edu">CMC Bookit</a>
-                        </p>
+                            <li>
+                                Clean up all trimmings before leaving the station
+                            </li>
+                        <h2>3D Printers</h2>
+                        <li>An authorization is <b>required</b> to book the 
+                            <a href="https://bookit.cmc.jhu.edu/reserve/3DPrinters">3D Printer</a></li>
+                        <li>Patrons are <b><u>NOT</u></b> allowed to change the printer filament. Please request CMC staff to do so</li>
+                        <li>Patrons may not bring their own filament</li>
+
+                        <h2>Soldering Station</h2>
+                        <li>Use only under staff supervision, or after completing CMC-approved training</li>
+                        <li>Follow all posted safety protocols, including eye protection and ventilation</li>
+
+                        <h2>Cricut Cutting</h2>
+                        <li>Please book out the <a href="https://bookit.cmc.jhu.edu/space/216622">Cricut Workstation</a></li>
+                        <li>Use only materials approved by staff</li>
+                        <li>Do not attempt to cut unsupported materials (e.g., wood, metal)</li>
+
+                        <h2>Before You Leave the CMC Hub</h2>
+                        <li>Log out of all devices and safely eject any drives</li>
+                        <li><b>CLEAN UP</b> your workspace (remove scraps, smudges, trash, tool debris)</li>
+                        <li>Return any borrowed tiems to designated locations</li>
+                        <li>Notify staff of any issues or malfunctions</li>
                     </div>
                 </div>
                 <div id="gamingPolicy" class="step" style="visibility: hidden; z-index: 2; position:absolute">
@@ -534,6 +550,34 @@
                         <h1>
                             CMC Gaming Lounge Policies
                         </h1>
+                        <h2>
+                            General Lounge Use Guidelines
+                        </h2>
+                        <li><b>No food or drink</b> near computers</li>
+                        <li>Clean up after yourself! Remove all trash and personal belongings</li>
+                        <li>Book out a pair if necessary here: 
+                            <a href="https://bookit.cmc.jhu.edu/reserve/Headphones">CMC Headphones</a></li>
+                        <li><b><u>DO NOT</u></b> install, modify, or uninstall software without staff assistance</li>
+                        <li><b><u>DO NOT</u></b> alter any hardware configurations</li>
+                        <li>If you need an admin password for updates or installs, contact a staff member during CMC open hours</li>
+                        <li>Respect noise levels and the shared atmosphere</li>
+                        <h2>
+                            Reservations
+                        </h2>
+                            <li><a href="https://bookit.cmc.jhu.edu/reserve/GamingPCs">Gaming PCs</a> must both be booked in advance</li>
+                            <li>Walk-ins are welcome when space is available</li>
+                            <li>Be respectful of your reserved time! If we see back-to-back bookings, we
+                                reserve the right to cancel your booking
+                            </li>
+                            <li>Refrain from leaving personal belongings in front of PCs in order to "save" a seat; this is 
+                                extremely disrespectful to all users of the space
+                            </li>
+                        <h2>Before you leave</h2>
+                        <li>Log out of all accounts and games</li>
+                        <li>Disconnect and remove any personal peripherals</li>
+                        <li>Return all keyboard wrist rests, booked out headphones, mouse weights, or accessories</li>
+                        <li>Take all of your personal items and trash</li>
+                        <li>Report any issues or damage to staff</li>
                     </div>
                 </div>
             </div>
